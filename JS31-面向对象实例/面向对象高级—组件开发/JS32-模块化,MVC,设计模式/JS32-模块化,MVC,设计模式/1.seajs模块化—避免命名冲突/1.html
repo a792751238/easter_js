@@ -1,0 +1,26 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>页面调用模块-避免命名冲突</title>
+<script src="sea.js"></script>
+<script>
+seajs.use('1.js', function (modA){  //第一个参数:模块路径(注意路径地址,容易出错),第二个参数:地址加载成功后的回调函数
+	alert(modA.a);
+	
+	modA.show();
+        
+        function show()  
+	{
+		alert('ABC2');
+	};
+        show(); //在定义同样名字的方法就不会有命名冲突了,因为另一个show方法是定义在了define里面,成了局部变量
+});
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

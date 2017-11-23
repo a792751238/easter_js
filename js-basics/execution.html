@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+</body>
+<script>
+// function f1() {
+//     var n = 999;
+
+//     function f2() {
+//         console.log(n);
+//     }
+
+//     function f3() {
+//         f2();
+//         console.log(n);
+//     }
+
+//     function f4() {
+//         f3();
+//         console.log(n);
+//     }
+//     return f4;
+// }
+// var result = f1();
+// result() // 999
+
+
+
+
+var color = 'blue';
+
+function changeColor() {
+    var anotherColor = 'red';
+
+    function swapColors() {
+        var tempColor = anotherColor;
+        anotherColor = color;
+        color = tempColor;
+    }
+
+    swapColors();
+}
+
+changeColor();
+
+
+
+
+var name = "window";
+
+var p = {
+    name: 'Perter',
+    getName: function() {
+        console.log(this);
+        // 利用变量保存的方式保证其访问的是p对象
+        var self = this;
+        return function() {
+            return self.name;
+        }
+    }
+}
+
+var getName = p.getName();
+var _name = getName();
+console.log(_name);
+</script>
+
+</html>
