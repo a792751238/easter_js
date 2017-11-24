@@ -3,13 +3,14 @@
 ```
 graph TB
 Array-->Array.splice
-
-arr.push(  )/arr.unshift(  )
-arr.pop(  )/arr.shift(  )
-arr.concat(  )
-arr.slice(  )
-arr.reverse(  )
-arr.sort(  )
+Array-->Array.push
+Array-->Array.unshift
+Array-->Array.pop
+Array-->Array.shift
+Array-->Array.concat
+Array-->Array.slice
+Array-->Array.reverse
+Array-->Array.sort
 ```
 
 
