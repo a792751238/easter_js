@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>练习：遍历数组</title>
+ </head>
+ <body>
+  <script type="text/javascript">
+	//1.定义函数，找出数组中最大值
+	function getMax(arr){
+		var max = arr[0];//假设第一个元素是最大值
+		//遍历arr,注意循环变量从1开始
+		for(var i=1;i<arr.length;i++)
+		{
+			if(max<arr[i]){
+				max=arr[i];
+			}
+		}
+		return max;//该函数需要有返回值
+	}
+
+  </script>
+  <button onclick="alert(getMax([1,2,3,4]))">求数组最大值</button>
+ </body>
+</html>

@@ -1,0 +1,389 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>资料分类</title>
+<link href="index.css" type="text/css" rel="stylesheet">
+<link href="recommend.css" type="text/css" rel="stylesheet">
+<link href="userint.css" type="text/css" rel="stylesheet">
+<link href="datapage.css" type="text/css" rel="stylesheet">
+<script>
+function getByClass(oParent, sClass)
+{
+	var aEle=oParent.getElementsByTagName('*');
+	var aResult=[];
+	var re=new RegExp('\\b'+sClass+'\\b', 'i');
+	
+	for(var i=0;i<aEle.length;i++)
+	{
+		if(re.test(aEle[i].className))
+		{
+			aResult.push(aEle[i]);
+		}
+	}
+	
+	return aResult;
+};
+
+window.onload=function()
+{
+	var oDateUl=document.getElementById('dateUl');
+	var aAjs=getByClass(oDateUl, 'ajs');
+	var aUlTwo=getByClass(oDateUl, 'ul_two');
+	var aLiTwo=getByClass(oDateUl, 'li_two');
+	var aLiDiv=getByClass(oDateUl, 'li_div_two');
+			
+	var iTime=null;
+	
+	for(var i=0; i<aAjs.length; i++)
+	{
+		aAjs[i].index=i;
+		aAjs[i].onmouseover=function()
+		{
+			clearTimeout(iTime);
+			for(var i=0; i<aAjs.length; i++)
+			{
+				aAjs[i].className='ajs';
+				aUlTwo[i].style.display='none';
+			}
+			this.className='ajs active_nav';
+			aUlTwo[this.index].style.display='block';
+		}
+
+		aAjs[i].onmouseout=function(ev)
+		{
+			var oEvent=ev||event;
+			
+			
+			
+			for(var i=0; i<aAjs.length; i++)
+			{
+				aAjs[i].index=i;
+				var _this=this;
+			}
+			iTime=setTimeout(function()
+			{
+				aUlTwo[_this.index].style.display='none';
+			},500);
+		};
+	}
+	
+	for(var i=0;i<aUlTwo.length;i++)
+	{
+		aUlTwo[i].onmouseover=function ()
+		{
+			clearTimeout(iTime);
+		};
+		aUlTwo[i].onmouseout=function ()
+		{
+			var _this=this;
+			iTime=setTimeout(function (){
+				_this.style.display='none';
+			}, 500);
+		};
+	}
+	
+	for(var i=0; i<aLiTwo.length; i++)
+	{
+		aLiTwo[i].index=i;
+		aLiTwo[i].onmouseover=function()
+		{
+			clearTimeout(iTime);
+			for(var i=0; i<aLiTwo.length; i++)
+			{
+				aLiTwo[i].className='li_two';
+				aLiDiv[i].style.display='none';
+			}	
+			this.className='li_two active_li_two';
+			aLiDiv[this.index].style.display='block';
+		}
+		aLiTwo[i].onmouseout=function()
+		{
+			aLiDiv[this.index].style.display='none';
+		}
+		
+	}
+		
+};
+</script>
+</head>
+<body class="datapage_index">
+<div class="top_bar second_top_bar">
+	<div class="top_links">
+    	<div class="top_links_inner clearfix">
+            <div class="login"><a href="#">登录</a><a href="#">注册</a></div>
+            <ul>
+                <li><a href="#">收藏本站</a></li>
+                <li><a href="#">新浪首页</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="iask_header clearfix">
+    <h1><a href="#" title="爱问共享资料">爱问共享资料</a></h1>
+    <div class="search_wrap">
+        <div class="search_inp"><input type="text" class="p_inp"><input type="button" value="搜索" class="p_btn"></div>
+        <div class="search_type">
+            <input type="checkbox" checked="checked" id="all" name="all"><label for="all">全部</label>
+            <input type="checkbox" id="TXT" name="TXT"><label for="TXT">TXT</label>
+            <input type="checkbox" id="DOC" name="DOC"><label for="DOC">DOC</label>
+            <input type="checkbox" id="PDF" name="PDF"><label for="PDF">PDF</label>
+            <input type="checkbox" id="PPT" name="PPT"><label for="PPT">PPT</label>
+            <input type="checkbox" id="CHM" name="CHM"><label for="CHM">CHM</label>
+            <input type="checkbox" id="RAR" name="RAR"><label for="RAR">RAR</label>
+            <input type="checkbox" id="EXE" name="EXE"><label for="EXE">EXE</label>
+        </div>
+    </div>
+</div>
+
+<div class="second_page_nav">
+    <div class="main_nav">
+        <ul class="clearfix">
+            <li><a href="#">首页</a></li>
+            <li class="current"><a href="#">资料分类</a></li>
+            <li><a href="#">随便看看</a></li>
+            <li><a href="#">用户榜</a></li>
+            <li><a href="#">个人中心</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="second_page_wrap">
+    <div class="datepage_tab">
+        <ul id="dateUl" class="datepage_ul clearfix">
+            <li class="datepage_ul_li">
+            	<a class="ajs" href="#">教育资料</a>
+                <!--nav切换-->
+                <ul class="ul_two">
+                	<li class="li_two active_li_two">
+                    	<h2 class="h2_two"><a href="#">幼儿教育</a></h2>
+                        <p class="li_two_p"><a href="#">办公读物</a><a href="#">少儿英语</a></p>
+                        <div class="li_div_two">
+                        	<p><a href="#">美术</a><a href="#">物理</a><a href="#">管理学</a></p>
+                            <p><a href="#">小学英语</a><a href="#">珠算</a><a href="#">化学</a></p>
+                        </div>
+                    </li>
+                    <li class="li_two">
+                    	<h2 class="h2_two"><a href="#">小学教育</a></h2>
+                        <p class="li_two_p"><a href="#">语文</a><a href="#">小学作文</a><a href="#">数学</a><a href="#">英语</a></p>
+                        <div class="li_div_two">
+                        	<p><a href="#">美术</a><a href="#">物理</a><a href="#">管理学</a></p>
+                            <p><a href="#">小学英语</a><a href="#">珠算</a><a href="#">化学</a></p>
+                        </div>
+                    </li>
+                    <li class="li_two">
+                    	<h2 class="h2_two"><a href="#">初中教育</a></h2>
+                        <p class="li_two_p"><a href="#">语文</a><a href="#">初中作文</a><a href="#">数学</a><a href="#">英语</a></p>
+                        <div class="li_div_two">
+                        	<p><a href="#">美术</a><a href="#">物理</a><a href="#">管理学</a></p>
+                            <p><a href="#">小学英语</a><a href="#">珠算</a><a href="#">化学</a></p>
+                        </div>
+                    </li>
+                    <li class="li_two">
+                    	<h2 class="h2_two"><a href="#">高中教育</a></h2>
+                        <p class="li_two_p"><a href="#">语文</a><a href="#">高中作文</a><a href="#">数学</a><a href="#">英语</a></p>
+                        <div class="li_div_two">
+                        	<p><a href="#">美术</a><a href="#">物理</a><a href="#">管理学</a></p>
+                            <p><a href="#">小学英语</a><a href="#">珠算</a><a href="#">化学</a></p>
+                        </div>
+                    </li>
+                    <li class="li_two">
+                    	<h2 class="h2_two"><a href="#">高等教</a></h2>
+                        <p class="li_two_p"><a href="#">理学</a><a href="#">经济学</a><a href="#">工学</a><a href="#">管理学</a></p>
+                        <div class="li_div_two">
+                        	<p><a href="#">美术</a><a href="#">物理</a><a href="#">管理学</a></p>
+                            <p><a href="#">小学英语</a><a href="#">珠算</a><a href="#">化学</a></p>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            
+            <li class="datepage_ul_li">
+            	<a class="ajs active_nav" href="#">办公文书</a>
+				<ul class="ul_two">
+                	<li class="li_two">
+                    	<h2 class="h2_two"><a href="#">幼儿教育</a></h2>
+                        <p class="li_two_p"><a href="#">办公读物</a><a href="#">少儿英语</a></p>
+                        <div class="li_div_two">
+                        	<p><a href="#">美术</a><a href="#">物理</a><a href="#">管理学</a></p>
+                            <p><a href="#">小学英语</a><a href="#">珠算</a><a href="#">化学</a></p>
+                        </div>
+                    </li>
+                    <li class="li_two active_li_two">
+                    	<h2 class="h2_two"><a href="#">小学教育</a></h2>
+                        <p class="li_two_p"><a href="#">语文</a><a href="#">小学作文</a><a href="#">数学</a><a href="#">英语</a></p>
+                        <div class="li_div_two">
+                        	<p><a href="#">美术</a><a href="#">物理</a><a href="#">管理学</a></p>
+                            <p><a href="#">小学英语</a><a href="#">珠算</a><a href="#">化学</a></p>
+                        </div>
+                    </li>
+                    <li class="li_two">
+                    	<h2 class="h2_two"><a href="#">初中教育</a></h2>
+                        <p class="li_two_p"><a href="#">语文</a><a href="#">初中作文</a><a href="#">数学</a><a href="#">英语</a></p>
+                        <div class="li_div_two">
+                        	<p><a href="#">美术</a><a href="#">物理</a><a href="#">管理学</a></p>
+                            <p><a href="#">小学英语</a><a href="#">珠算</a><a href="#">化学</a></p>
+                        </div>
+                    </li>
+                    <li class="li_two">
+                    	<h2 class="h2_two"><a href="#">高中教育</a></h2>
+                        <p class="li_two_p"><a href="#">语文</a><a href="#">高中作文</a><a href="#">数学</a><a href="#">英语</a></p>
+                        <div class="li_div_two">
+                        	<p><a href="#">美术</a><a href="#">物理</a><a href="#">管理学</a></p>
+                            <p><a href="#">小学英语</a><a href="#">珠算</a><a href="#">化学</a></p>
+                        </div>
+                    </li>
+                    <li class="li_two">
+                    	<h2 class="h2_two"><a href="#">高等教</a></h2>
+                        <p class="li_two_p"><a href="#">理学</a><a href="#">经济学</a><a href="#">工学</a><a href="#">管理学</a></p>
+                        <div class="li_div_two">
+                        	<p><a href="#">美术</a><a href="#">物理</a><a href="#">管理学</a></p>
+                            <p><a href="#">小学英语</a><a href="#">珠算</a><a href="#">化学</a></p>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            
+            <li class="datepage_ul_li">
+            	<a  class="ajs" href="#">娱乐生活</a>
+            	<ul class="ul_two">
+                	<li class="li_two active_li_two">
+                    	<h2 class="h2_two"><a href="#">幼儿教育</a></h2>
+                        <p class="li_two_p"><a href="#">办公读物</a><a href="#">少儿英语</a></p>
+                        <div class="li_div_two">
+                        	<p><a href="#">美术</a><a href="#">物理</a><a href="#">管理学</a></p>
+                            <p><a href="#">小学英语</a><a href="#">珠算</a><a href="#">化学</a></p>
+                        </div>
+                    </li>
+                    <li class="li_two">
+                    	<h2 class="h2_two"><a href="#">小学教育</a></h2>
+                        <p class="li_two_p"><a href="#">语文</a><a href="#">小学作文</a><a href="#">数学</a><a href="#">英语</a></p>
+                        <div class="li_div_two">
+                        	<p><a href="#">美术</a><a href="#">物理</a><a href="#">管理学</a></p>
+                            <p><a href="#">小学英语</a><a href="#">珠算</a><a href="#">化学</a></p>
+                        </div>
+                    </li>
+                    <li class="li_two">
+                    	<h2 class="h2_two"><a href="#">初中教育</a></h2>
+                        <p class="li_two_p"><a href="#">语文</a><a href="#">初中作文</a><a href="#">数学</a><a href="#">英语</a></p>
+                        <div class="li_div_two">
+                        	<p><a href="#">美术</a><a href="#">物理</a><a href="#">管理学</a></p>
+                            <p><a href="#">小学英语</a><a href="#">珠算</a><a href="#">化学</a></p>
+                        </div>
+                    </li>
+                    <li class="li_two">
+                    	<h2 class="h2_two"><a href="#">高中教育</a></h2>
+                        <p class="li_two_p"><a href="#">语文</a><a href="#">高中作文</a><a href="#">数学</a><a href="#">英语</a></p>
+                        <div class="li_div_two">
+                        	<p><a href="#">美术</a><a href="#">物理</a><a href="#">管理学</a></p>
+                            <p><a href="#">小学英语</a><a href="#">珠算</a><a href="#">化学</a></p>
+                        </div>
+                    </li>
+                    <li class="li_two">
+                    	<h2 class="h2_two"><a href="#">高等教</a></h2>
+                        <p class="li_two_p"><a href="#">理学</a><a href="#">经济学</a><a href="#">工学</a><a href="#">管理学</a></p>
+                        <div class="li_div_two">
+                        	<p><a href="#">美术</a><a href="#">物理</a><a href="#">管理学</a></p>
+                            <p><a href="#">小学英语</a><a href="#">珠算</a><a href="#">化学</a></p>
+                        </div>
+                    </li>
+                </ul>    
+            </li>
+            
+            <li class="datepage_ul_li">
+            	<a  class="ajs" href="#">专业资料</a>
+            	<ul class="ul_two">
+                	<li class="li_two active_li_two">
+                    	<h2 class="h2_two"><a href="#">幼儿教育</a></h2>
+                        <p class="li_two_p"><a href="#">办公读物</a><a href="#">少儿英语</a></p>
+                        <div class="li_div_two">
+                        	<p><a href="#">美术</a><a href="#">物理</a><a href="#">管理学</a></p>
+                            <p><a href="#">小学英语</a><a href="#">珠算</a><a href="#">化学</a></p>
+                        </div>
+                    </li>
+                    <li class="li_two">
+                    	<h2 class="h2_two"><a href="#">小学教育</a></h2>
+                        <p class="li_two_p"><a href="#">语文</a><a href="#">小学作文</a><a href="#">数学</a><a href="#">英语</a></p>
+                        <div class="li_div_two">
+                        	<p><a href="#">美术</a><a href="#">物理</a><a href="#">管理学</a></p>
+                            <p><a href="#">小学英语</a><a href="#">珠算</a><a href="#">化学</a></p>
+                        </div>
+                    </li>
+                    <li class="li_two">
+                    	<h2 class="h2_two"><a href="#">初中教育</a></h2>
+                        <p class="li_two_p"><a href="#">语文</a><a href="#">初中作文</a><a href="#">数学</a><a href="#">英语</a></p>
+                        <div class="li_div_two">
+                        	<p><a href="#">美术</a><a href="#">物理</a><a href="#">管理学</a></p>
+                            <p><a href="#">小学英语</a><a href="#">珠算</a><a href="#">化学</a></p>
+                        </div>
+                    </li>
+                    <li class="li_two">
+                    	<h2 class="h2_two"><a href="#">高中教育</a></h2>
+                        <p class="li_two_p"><a href="#">语文</a><a href="#">高中作文</a><a href="#">数学</a><a href="#">英语</a></p>
+                        <div class="li_div_two">
+                        	<p><a href="#">美术</a><a href="#">物理</a><a href="#">管理学</a></p>
+                            <p><a href="#">小学英语</a><a href="#">珠算</a><a href="#">化学</a></p>
+                        </div>
+                    </li>
+                    <li class="li_two">
+                    	<h2 class="h2_two"><a href="#">高等教</a></h2>
+                        <p class="li_two_p"><a href="#">理学</a><a href="#">经济学</a><a href="#">工学</a><a href="#">管理学</a></p>
+                        <div class="li_div_two">
+                        	<p><a href="#">美术</a><a href="#">物理</a><a href="#">管理学</a></p>
+                            <p><a href="#">小学英语</a><a href="#">珠算</a><a href="#">化学</a></p>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+            
+            <li class="datepage_ul_li">
+            	<a  class="ajs" href="#">IT/互联网</a>
+            	<ul class="ul_two">
+                	<li class="li_two active_li_two">
+                    	<h2 class="h2_two"><a href="#">幼儿教育</a></h2>
+                        <p class="li_two_p"><a href="#">办公读物</a><a href="#">少儿英语</a></p>
+                        <div class="li_div_two">
+                        	<p><a href="#">美术</a><a href="#">物理</a><a href="#">管理学</a></p>
+                            <p><a href="#">小学英语</a><a href="#">珠算</a><a href="#">化学</a></p>
+                        </div>
+                    </li>
+                    <li class="li_two">
+                    	<h2 class="h2_two"><a href="#">小学教育</a></h2>
+                        <p class="li_two_p"><a href="#">语文</a><a href="#">小学作文</a><a href="#">数学</a><a href="#">英语</a></p>
+                        <div class="li_div_two">
+                        	<p><a href="#">美术</a><a href="#">物理</a><a href="#">管理学</a></p>
+                            <p><a href="#">小学英语</a><a href="#">珠算</a><a href="#">化学</a></p>
+                        </div>
+                    </li>
+                    <li class="li_two">
+                    	<h2 class="h2_two"><a href="#">初中教育</a></h2>
+                        <p class="li_two_p"><a href="#">语文</a><a href="#">初中作文</a><a href="#">数学</a><a href="#">英语</a></p>
+                        <div class="li_div_two">
+                        	<p><a href="#">美术</a><a href="#">物理</a><a href="#">管理学</a></p>
+                            <p><a href="#">小学英语</a><a href="#">珠算</a><a href="#">化学</a></p>
+                        </div>
+                    </li>
+                    <li class="li_two">
+                    	<h2 class="h2_two"><a href="#">高中教育</a></h2>
+                        <p class="li_two_p"><a href="#">语文</a><a href="#">高中作文</a><a href="#">数学</a><a href="#">英语</a></p>
+                        <div class="li_div_two">
+                        	<p><a href="#">美术</a><a href="#">物理</a><a href="#">管理学</a></p>
+                            <p><a href="#">小学英语</a><a href="#">珠算</a><a href="#">化学</a></p>
+                        </div>
+                    </li>
+                    <li class="li_two">
+                    	<h2 class="h2_two"><a href="#">高等教</a></h2>
+                        <p class="li_two_p"><a href="#">理学</a><a href="#">经济学</a><a href="#">工学</a><a href="#">管理学</a></p>
+                        <div class="li_div_two">
+                        	<p><a href="#">美术</a><a href="#">物理</a><a href="#">管理学</a></p>
+                            <p><a href="#">小学英语</a><a href="#">珠算</a><a href="#">化学</a></p>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>

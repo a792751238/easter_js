@@ -1,0 +1,76 @@
+
+/*
+ * author tingting19@staff.sina.com.cn
+ *
+ * update 2012-12-25
+ *
+*/
+/*=============================  second page header =====================================*/
+.second_page_nav{width:980px;margin:0 auto;}
+.second_page_nav .main_nav{border-radius:2px 2px 0 0;border-width:1px 1px 4px 1px;border-style:solid;border-color:#d9d9d9 #d9d9d9 #ffb900 #d9d9d9}
+.second_top_bar .top_links{background:url(../images/top_bar_bg01.png) no-repeat 0 0;padding-left:29px;float:right;width:208px;}
+.top_links_inner{background-color:#f5f5f5;border-bottom:1px solid #e5e5e5;}
+.second_top_bar .top_links ul{float:right;background:none;padding:0}
+.second_top_bar li{border:0;background:none;margin-right:10px;}
+.top_links .login{float:left;}
+.top_links .login a{margin-right:11px;color:#333333;}
+.top_links .login a:hover{color:#cc0033}
+.second_top_bar li a{color:#333333;text-decoration:none}
+.second_top_bar li a:hover{text-decoration:underline}
+/*=============================  second page content =====================================*/
+.second_page_wrap{width:980px;margin:0 auto;text-align:left}
+/*=============================  breadcrumb =====================================*/
+.breadcrumb{padding:6px 0 5px 22px;}
+.breadcrumb span{padding:0 6px 0 8px;}
+.breadcrumb .current{padding:0;color:#427c28}
+/*=============================  recommend content =====================================*/
+.rec_c_l{width:772px;float:left}
+.rec_c_r{width:196px;float:right;border:1px solid #d1d2d1; background:#f2f2f2;}
+/*=============================  recommend tabel =====================================*/
+.rec_tabel{border:1px solid #cae8ae;margin-top:10px;}
+.list_detail{width:605px;line-height:24px;_line-height:28px;padding:3px 0;_margin:6px 0;_padding:0}
+.list_detail dt{float:left;width:29px;text-align:right;font-size:14px;line-height:21px;_line-height:14px;overflow:hidden;height:24px;}
+.list_detail dd{margin-left:32px;}
+.list_detail .list_name a{color:#256504;font-size:14px}
+.iask_icon14{background:url(../images/icon14.png) no-repeat 0 0;width:14px;height:14px;display:inline-block;vertical-align:-2px;_vertical-align:0px;margin-right:6px;}
+.icon14_ppt{background-position:0 0;}
+.margin30{margin-right:30px;float:left}
+.list_info .lavel{float:left;margin-right:40px;}
+.list_info .lavel .margin30{margin:0;}
+.list_info .star{float:left;padding-top:3px;}
+.list_info .star li{float:left;width:16px;height:16px;display:inline-block;background:url(../images/iask_icon.png) no-repeat 0 -40px;}
+.list_info .star .selected{background-position:-20px -40px;}
+.rec_tabel .download{line-height:20px;vertical-align:top;padding:12px 9px 0 0;}
+.list_row td{border-bottom:1px solid #cdcdcd;}
+.border_none td{border:0 none}
+/*=============================  recommend search =====================================*/
+.rec_c_search{padding:20px 19px 25px 130px;}
+.rec_c_search .search_wrap{float:left;width:455px;}
+.rec_c_search .upload_data{float:right;font-size:14px;color:#256504;width:98px;}
+/*=============================  side share =====================================*/
+.side_share{padding:20px 17px 0 11px;}
+.side_share h2{font-size:18px;font-weight:500;margin-bottom:4px;}
+.side_share p{line-height:20px;margin-bottom:16px;}
+.upload_data_btn{width:163px;height:47px;display:inline-block;background:url(../images/iask_icon.png) no-repeat 0 -60px;}
+/*=============================  side top =====================================*/
+.side_top{padding:13px 10px 10px 9px;width:177px;overflow:hidden}
+.side_top .side_mess_tab p{width:58px;}
+.side_top .side_glance_list li{height:30px;line-height:30px;}
+.side_top .tab_box{height:auto}
+.side_top .side_glance_list{padding-top:10px;padding-bottom:13px;background:url(../images/side_h2_bj.png) no-repeat left bottom}
+.side_top .side_mess_tit{width:171px;margin-left:-9px;}
+/*=============================  user top =====================================*/
+.user_top{padding:3px 0 20px 0;}
+.user_top .side_mess_tab p{width:88px;}
+.user_top .side_mess_tit,.side_top .side_mess_tit{padding:0 11px 0 12px;background-position:10px bottom;height:24px;line-height:24px;border:1px solid #f2f2f2;overflow:hidden}
+.user_top .active_h2,.side_top .active_h2{border:1px solid #D1D2D1}
+.side_tab_wrap{padding:0 8px 0 11px;}
+.user_top_info{background:url(../images/side_h2_bj.png) no-repeat left bottom;height:32px;overflow:hidden}
+.user_top_info span{width:88px;text-align:center;display:inline-block;line-height:30px;}
+.user_top .tab_box{padding:0 8px 0 11px;height:auto}
+.user_top .tab_box td{height:30px;line-height:30px;}
+.tab_box .first_col{width:25px;}
+.tab_box .second_col{padding-left:8px;}
+.tab_box .second_col a{color:#256504;}
+
+

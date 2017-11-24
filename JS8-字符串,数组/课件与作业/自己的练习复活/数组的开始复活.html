@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<HTML>
+ <HEAD>
+  <meta charset="utf-8"/>
+  <meta name="generator" content="editplus" />
+  <meta name="author" content="" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <TITLE> 数组 </TITLE>
+ 
+ </HEAD>
+
+ <BODY>
+  <script type="text/javascript">
+      var arr1=[123,'123','aaa',new Date()];
+	  console.log(arr1.toString());//输出123,123,aaa,系统时间
+	  console.log(arr1.join());//同上
+      //concat拼接
+	  var arr2=[90,91,92];
+	  var arr3=[95,96];
+	  var arr4=[100];
+	  var arr5=arr2.concat(93,94,arr3,arr4);
+	  console.log(arr5);//数组拼接
+      //slice截取
+	  var arr6=[1,2,3,4,5,6,7];
+	  var arr7=arr6.slice(0,4);//与字符的差不多，最后的一位并不包括
+	  var arr8=arr6.slice(-5,-1);
+	  console.log(arr8);
+	  console.log(arr7);
+      //splice修改
+	  var sum1=[1,2,3,4,5];
+	  var sum2=sum1.splice(0,2);
+	  console.log(sum2);//返回1，2，返回被删除的数组
+	  console.log(sum1);//返回3，4，5  原数组改变
+	  var sum3=[90,91,92,93,94,95];
+	  console.log(sum3.splice(0,2,'cc',98,99,100));//返回90，91
+	  console.log(sum3);//返回'cc',100,92,93,94,95添加到原数组了   添加从删除的位置开始添加
+      //数组反转
+	  var sum4=[1,2,3,4,5,6,7];
+	  sum5= sum4.reverse();
+	  console.log(sum5);
+	  //sort排序
+	  var sum6=[-1,-4,6,7,-6];
+	  console.log(sum6.sort());
+  </script>
+ </BODY>
+</HTML>

@@ -1,0 +1,38 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>字符串,伪数组长度修改也没用</title>
+<style>
+*{ margin:0; padding:0; list-style:none; font-family: "微软雅黑","张海山锐线体简"}
+
+</style>
+<script>
+/*
+show(12,5,'bmw');
+
+function show(){
+	//alert(arguments.length)	
+	arguments.length=1;  // 伪数组长度修改也没用
+	alert(arguments.length);  // 1
+	alert(arguments[2]); // bmw
+}
+*/
+
+
+var str='bmw';
+alert(str.length);  // 3
+str.length=1;   //字符串长度修改也没用
+alert(str); //bmw
+
+
+</script>
+</head>
+
+<body>
+
+
+
+</body>
+</html>

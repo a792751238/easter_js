@@ -1,0 +1,41 @@
+/*=======================userint_wrap================================*/
+.userint_le{ width:772px; float:left;}
+.userint_ri{ width:196px;background:#F2F2F2; border:1px solid #D1D2D1;float: right;}
+.userint_le_l{ width:381px; float:left;}
+.userint_le_r{ width:381px; float:right;}
+.con_list{ width:341px; height:116px; border:1px solid #cae8ae; margin-top:10px; padding:20px 19px;}
+.att_but{ text-align:center;}
+.att_but_img{ display:block; background:url(../images/att_but.png) no-repeat top left; width:54px; height:22px;}
+.att_but_img:hover{background:url(../images/att_but.png) no-repeat bottom left; }
+.em_m5{ margin-right:5px; background:url(../images/gou.png) no-repeat left center; width:12px; height:9px; display:inline-block;}
+.em_m05{ margin:0 5px;color:#999;}
+.att_but2{ width:109px; height:22px; background:url(../images/att_but2.png) no-repeat; text-align:center;}
+.S_link1{ color:#999;}
+.S_link1:hover{ text-decoration:none;}
+.list_dt{ width:86px; height:86px; float:left; background:url(../images/dt_bj.png) no-repeat;}
+.list_dt a{ margin:1px 0 0 1px; display:block;}
+.list_dd{ float:left; padding-left:8px;}
+.list_dd span,.list_dd a{ color:#256504;}
+.con_top{margin-top:10px;}
+.user_li_h2{ height:23px; border:1px solid #d1d2d1; background:#f2f2f2; width:379px; font-size:14px; font-weight:bold;}
+.user_li_ul{  border:1px solid #cae8ae; border-top:none; padding-top:10px;}
+.user_li_ul .ul02{ width:359px;height:23px; padding:0 10px;}
+.user_li_ul li{ float:left;}
+.user_li_h2 li{ float:left; }
+.bj_color1{background:#eef8e6;}
+.bj_color2{background:#fff}
+.name{ width:69px; text-align:center;}
+.number{ width:154px; text-align:right;}
+.sh_num{ width:128px; text-align:center; padding-left:28px;}
+.li001{ padding:0 5px;}
+.li001 a{color:#256504;}
+.li003{ width:140px; text-align:center; margin-left:24px; display:inline; }
+.li004{ width:58px; text-align:center;}
+
+.sec_box{ width:64px; height:68px; background:#fff; }
+.sec_box_t{ height:24px; line-height:24px; background:#256504;text-align:center; }
+.sec_box_t a{ color:#fff;}
+.sec_box_t a:hover{ color:#fff; text-decoration:underline;}
+.sec_box_b{ padding:0 6px;}
+
+#hover_color{ color:#256504; text-decoration:none;}

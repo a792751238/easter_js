@@ -1,0 +1,104 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>多级树形菜单</title>
+<style type="text/css">
+* { padding: 0; margin: 0; }
+li { list-style: none; }
+
+#menu { font: 12px arail; color: #333;}
+#menu ul { padding-left: 24px; display:none; }
+#menu li { line-height: 20px; line-height: 20px; cursor: pointer; }
+
+
+</style>
+<script type="text/javascript">
+window.onload=function ()
+{
+	//点击Li，让其中的第0个ul显示
+	var oMenu=document.getElementById('menu');
+	var aLi=oMenu.getElementsByTagName('li');
+	var i=0;
+	
+	for(i=0;i<aLi.length;i++)
+	{
+		aLi[i].onclick=function (ev)
+		{
+			var oEvent=ev||event;
+			
+			var aUl=this.getElementsByTagName('ul');
+			if(aUl.length>0)
+			{
+				if(aUl[0].style.display=='block')
+				{
+					this.getElementsByTagName('img')[0].src='tt1.gif';
+					aUl[0].style.display='none';
+				}
+				else
+				{
+					this.getElementsByTagName('img')[0].src='tt2.gif';
+					aUl[0].style.display='block';
+				}
+			}
+			
+			oEvent.cancelBubble=true;
+		};
+	}
+};
+</script>
+</head>
+
+<body>
+
+<ul id="menu">
+	<li>
+		<div><img src="tt1.gif" alt="+" /> 一级菜单</div>
+		<ul>
+			<li>
+				<div><img src="tt1.gif" alt="+" /> 二级菜单</div>
+				<ul>
+					<li>
+						<div>三级菜单</div>
+						<div>三级菜单</div>
+						<div>三级菜单</div>
+						<div>三级菜单</div>
+						<div>三级菜单</div>
+						<div>三级菜单</div>
+						<div>三级菜单</div>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<div><img src="tt1.gif" alt="+" /> 二级菜单</div>
+				<ul>
+					<li>
+						<div>三级菜单</div>
+						<div>三级菜单</div>
+						<div>三级菜单</div>
+						<div>三级菜单</div>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+	<li>
+		<div><img src="tt1.gif" alt="+" /> 一级菜单</div>
+		<ul>
+			<li>
+				<div><img src="tt1.gif" alt="+" /> 二级菜单</div>
+				<ul>
+					<li>
+						<div>三级菜单</div>
+					</li>
+				</ul>
+			</li>
+			<li>二级菜单</li>
+			<li>二级菜单</li>
+			<li>二级菜单</li>
+			<li>二级菜单</li>
+		</ul>
+	</li>
+</ul>
+</body>
+</html>

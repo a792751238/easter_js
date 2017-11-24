@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<HTML>
+
+<HEAD>
+    <meta charset="utf-8" />
+    <meta name="generator" content="editplus" />
+    <meta name="author" content="" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <TITLE>New Document</TITLE>
+</HEAD>
+
+<BODY>
+    <input type="button" id="btn">
+    <p id="p1"></p>
+    <script type="text/javascript">
+        //字符串反转
+         //       var str='hello world';
+         //	   console.log(str);
+         //	   var str2=str.split(' ');
+         //	   console.log(str2);
+         //	   var str3=str2.reverse();
+         //	   console.log(str3);
+         //	   str4=str3.toString();
+         //	   console.log(str4);
+        var oBtn = document.getElementById('btn');
+        var oP = document.getElementById('p1');
+        var str = [11, 66, 99, 22, -44, -5, -22];
+        oP.innerHTML = str;
+        oBtn.value = '升序';
+        var len = true;
+        oBtn.onclick = function() {
+            if (len == true) {
+                str = str.sort(function(a, b) {
+                    return a - b;
+                })
+                len = false;
+                oP.innerHTML = str;
+                oBtn.value = '降序';
+            } else {
+                str = str.sort(function(a, b) {
+                    return b - a;
+                })
+                len = true;
+                oP.innerHTML = str;
+                oBtn.value = '升序';
+            }
+        }
+    </script>
+</BODY>
+
+</HTML>
