@@ -13,6 +13,10 @@
     Em.prototype.on = function (eventname, listener) {
         if (!eventname || !listener) return;
 
+        if (!_isValidListener(listener)) {
+            throw new TypeError('listener must be a function');
+        }
+
         var events = this._events;
         var listeners = events[eventname] = events[eventname] || [];
         //如果listener是一个对象，则返回true
@@ -77,9 +81,23 @@
         })
     };
 
-    Em.prototype.allOff = function () {
+    Em.prototype.allOff = function (eventname) {
+        if (eventname && this._events[eventname]) {
+            this._events[eventname] = [];
+        } else {
+            this._events = {};
+        }
     };
 
+    function _isValidListener(listener) {
+        if (typeof listener === 'function') {
+            return true
+        } else if (listener && typeof listener === 'object') {
+            return _isValidListener(listener.listener)
+        } else {
+            return false
+        }
+    }
 
     function _indexOf(array, item) {
         if (array.indexOf) {
