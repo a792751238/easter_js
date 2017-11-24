@@ -215,3 +215,15 @@ console.log(arr2);//["龙", "虎", "斗"]
 3. 原数组会修改,一般数组删除可以用splice
 
 
+#### Array.prototype.slice
+```
+var arr6 = [1, 2, 3, 4, 5, 6, 7];
+var arr7 = arr6.slice(0, 4);//与字符的差不多，最后的一位并不包括
+var arr8 = arr6.slice(-5, -1);
+console.log(arr8);//[3, 4, 5, 6]返回截取的新数组
+console.log(arr7);//[1, 2, 3, 4]参数可以为负值
+console.log(arr6);//[1, 2, 3, 4, 5, 6, 7]原数组不变
+```
+1. 返回一个新数组，值为截取的数据
+2. 原数组不改变
+3. 参数可以为负值
