@@ -1,17 +1,57 @@
 #### 方法
 ```
 graph LR
-String-->String.prototype.charAt
-String-->String.prototype.indexOf
-String-->String.prototype.lastIndexOf
-String-->String.prototype.substring
-String-->String.prototype.slice
-String-->String.prototype.substr
-String-->String.prototype.split
+String-->|返回特定位置字符| String.prototype.charAt
+
+String-->|返回下标字符的unicode|String.prototype.charCodeAt
+
+String-->String.prototype.codePointAt
+
+String-->|连接两个字符,返回新字符| String.prototype.concat
+
+String-->|判断一字符是否包含另一字符| String.prototype.includes
+
+String-->|判断一个字符串的结尾是否包含其他字符串中的字符|String.prototype.endsWith
+
+String-->|字符串对象中返回首个被发现索引值,没有返回-1|String.prototype.indexOf
+
+String-->|字符串对象中返回最后一个被发现索引值,没有返回-1|String.prototype.lastIndexOf
+
+String-->String.prototype.localeCompare
+
+String-->|使用正则表达式与字符串相比较|String.prototype.match
+
+String-->String.prototype.normalize
+
+String-->|返回指定重复次数的由元素组成的字符串对象|String.prototype.repeat
+
+String-->|正则表达式比较,用新字符来替换被匹配的字符|String.prototype.replace
+
+String-->|正则表达式匹配,返回第一个匹配的下标|String.prototype.search
+
+String-->|截取一个字符串区域,返回新字符串|String.prototype.slice
+
+String-->|通过分离字符串成字串,将字符串对象分割成字符串数组|String.prototype.split
+
+String-->String.prototype.startsWith
+
+String-->|通过指定字符数返回在指定位置开始的字符串中的字符|String.prototype.substr
+
+String-->|返回在字符串中指定两个下标之间的字符|String.prototype.substring
+
+String-->String.prototype.toLocaleUpperCase
+
+String-->String.prototype.toLocaleLowerCase
+
 String-->String.prototype.toUpperCase
+
 String-->String.prototype.toLowerCase
-String-->String.prototype.replace
-String-->String.prototype.charCodeAt
+
+String-->|返回用字符串表示的特定对象|String.prototype.toString
+
+String-->|字符串的开始和结尾去除空格|String.prototype.trim
+
+String-->|返回特定对象的原始值|String.prototype.valueOf
 ```
 
 #### 字符串
