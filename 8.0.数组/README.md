@@ -1,6 +1,6 @@
 #### 方法
 ```
-graph TB
+graph LR
 Array-->Array.prototype.splice
 Array-->Array.prototype.push
 Array-->Array.prototype.unshift
@@ -10,6 +10,28 @@ Array-->Array.prototype.concat
 Array-->Array.prototype.slice
 Array-->Array.prototype.reverse
 Array-->Array.prototype.sort
+
+Array-->Array.from
+Array-->Array.isArray
+Array-->Array.of
+Array-->Array.prototype.copyWithin
+Array-->Array.prototype.fill
+Array-->Array.prototype.filter
+Array-->Array.prototype.find
+Array-->Array.prototype.findIndex
+Array-->Array.prototype.forEach
+Array-->Array.prototype.includes
+Array-->Array.prototype.join
+Array-->Array.prototype.keys
+Array-->Array.prototype.lastIndexOf
+Array-->Array.prototype.map
+Array-->Array.prototype.reduce
+Array-->Array.prototype.reduceRight
+Array-->Array.prototype.some
+Array-->Array.prototype.toLocalString
+Array-->Array.prototype.toSource
+Array-->Array.prototype.toString
+Array-->Array.prototype.values
 ```
 
 

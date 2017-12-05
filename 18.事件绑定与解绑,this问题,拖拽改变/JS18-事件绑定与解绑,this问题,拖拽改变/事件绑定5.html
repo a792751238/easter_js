@@ -1,0 +1,39 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title> 事件绑定封装</title>
+<style>
+*{ margin:0; padding:0; list-style:none; font-family: "微软雅黑","张海山锐线体简"}
+
+</style>
+<script>
+window.onload=function(){
+	var oBtn=document.getElementById('btn1');
+	
+	addEvent(oBtn,'click',function(){
+		alert('abc');	
+	});
+	addEvent(oBtn,'click',function(){
+		alert('222');	
+	});
+	
+	function addEvent(obj,sEvt,fn){
+		//var fn=function(){}
+		if(obj.addEventListener){
+			obj.addEventListener(sEvt,fn,false);
+		}else{
+			obj.attachEvent('on'+sEvt,fn);	
+		}
+	}
+};
+</script>
+</head>
+
+<body>
+
+<input type="button" value="按钮" id="btn1">
+
+</body>
+</html>

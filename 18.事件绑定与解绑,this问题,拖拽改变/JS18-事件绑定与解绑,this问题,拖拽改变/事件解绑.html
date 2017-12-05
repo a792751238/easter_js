@@ -1,0 +1,43 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>事件解绑</title>
+<style>
+*{ margin:0; padding:0; list-style:none; font-family: "微软雅黑","张海山锐线体简"}
+
+</style>
+<script>
+window.onload=function(){
+	var oBtn=document.getElementById('btn1');
+	oBtn.addEventListener('click',show,false);
+	oBtn.addEventListener('click',show2,false);
+	function show(){
+		alert('abc');
+	}	
+	function show2(){
+		alert('222');
+	}	
+	
+	
+	//解绑
+	//对象.removeEventListener(事件名,函数,false);  chrome FF IE 9 10
+	
+	oBtn.removeEventListener('click',show,false);
+	oBtn.removeEventListener('click',show2,false);
+
+        //解绑
+	//对象.detachEvent(事件名,函数);        IE 6 7 8
+	// oBtn.detachEvent('onclick',show2);
+	
+};
+</script>
+</head>
+
+<body>
+
+<input type="button" value="按钮" id="btn1">
+
+</body>
+</html>

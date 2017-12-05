@@ -1,0 +1,31 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>定时器内this问题</title>
+<style>
+*{ margin:0; padding:0; list-style:none; font-family: "微软雅黑","张海山锐线体简"}
+
+</style>
+<script>
+window.onload=function(){
+	var oBtn=document.getElementById('btn1');
+	oBtn.onclick=function(){
+		// alert(this); // HtmlInputElement 对象
+		var _this=this;
+		setTimeout(function(){
+                    //    alert(this); // window 对象
+			alert(_this);		//HtmlInputElement
+		},1000);
+	};	
+};
+</script>
+</head>
+
+<body>
+
+<input type="button" value="按钮" id="btn1">
+
+</body>
+</html>

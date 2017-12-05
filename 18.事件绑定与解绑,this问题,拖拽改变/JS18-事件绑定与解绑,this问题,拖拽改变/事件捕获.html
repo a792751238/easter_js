@@ -1,0 +1,46 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>事件捕获</title>
+    <style>
+    </style>
+    <script>
+        window.onload = function() {
+            var oDiv1 = document.getElementById('div1');
+            var oDiv2 = document.getElementById('div2');
+            var oDiv3 = document.getElementById('div3');
+            oDiv1.onclick = function() {
+                alert(this.style.background);
+            }
+            oDiv2.onclick = function(e) {
+                alert(this.style.background);
+                e.stopPropagation()
+            }
+            oDiv3.onclick = function(eve) {
+                alert(this.style.background);
+                stopEve(eve);
+            }
+            //阻止事件冒泡
+            function stopEve(event) {
+                var e = event || window.event;
+                if (e && e.stopPropagation) {
+                    e.stopPropagation();
+                } else {
+                    e.cancelBubble = true;
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="div1" style="width:500px; height:500px; background:red;">
+        <div id="div2" style="height:300px; width:300px; background:yellow">
+            <div id="div3" style="width:100px; height:100px; background:blue"></div>
+        </div>
+    </div>
+</body>
+
+</html>

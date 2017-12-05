@@ -1,0 +1,51 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>解除绑定</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: "微软雅黑","张海山锐线体简"
+}
+    </style>
+    <script>
+        window.onload = function() {
+            var oBtn = document.getElementById('btn1');
+            //绑两个click事件
+            if (oBtn.addEventListener) {
+                oBtn.addEventListener('click', show, false);
+                oBtn.addEventListener('click', show2, false);
+            } else {
+                oBtn.attachEvent('onclick', show);
+                oBtn.attachEvent('onclick', show2);
+            }
+            removeEvent(oBtn, 'click', show); //解除一个
+
+            function removeEvent(obj, sEvt, fn) {
+                if (obj.removeEventListener) {
+                    obj.removeEventListener(sEvt, fn, false);
+                } else {
+                    obj.detachEvent('on' + sEvt, fn);
+                }
+            }
+
+            function show() {
+                alert('abc');
+            }
+
+            function show2() {
+                alert('222');
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <input type="button" value="按钮" id="btn1">
+</body>
+
+</html>

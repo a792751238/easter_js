@@ -1,0 +1,30 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>克隆节点</title>
+<style>
+*{ margin:0; padding:0; list-style:none; font-family: "微软雅黑","张海山锐线体简"}
+.div1{width:200px;height:200px;background:red;}
+</style>
+<script>
+window.onload=function(){
+	var oDiv=document.getElementById('div1');
+	var newDiv=oDiv.cloneNode(true);
+	//newDiv.setAttribute('id','');
+	 newDiv.removeAttribute('id');	//删除属性
+	document.body.appendChild(newDiv);
+};
+</script>
+</head>
+
+<body>
+
+<div id="div1" class="div1">
+	asdfasdf
+    <img src="m1.jpg" width="50">
+</div>
+
+</body>
+</html>

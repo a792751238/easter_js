@@ -1,0 +1,69 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>拼音</title>
+<style>
+ul, li, em {margin:0; padding:0; list-style:none;}
+#ul1 li {padding:6px 4px;}
+</style>
+<script>
+window.onload = function(){
+	var oT1 = document.getElementById("txt1");
+	var oT2 = document.getElementById("txt2");
+	var oUl = document.getElementById("ul1");
+	
+	var arr=eval('('+oT1.value+')')
+	for(var i=0; i<arr.length; i++){
+		var arr2=arr[i].pin.split(" ");
+		for(var j=0; j<arr2.length; j++){
+			if(arr[i].jp){
+				arr[i].jp+=arr2[j].charAt(0);
+			}else{
+				arr[i].jp=arr2[j].charAt(0);
+			}
+		}
+		
+		var oLi = document.createElement("li");
+		oLi.innerHTML=arr[i].name+'<span>('+arr[i].pin+')</span>'
+		oUl.appendChild(oLi);
+	}
+	oT2.onkeyup = function(){
+		oUl.innerHTML='';
+		var s= oT2.value;
+		for(var i=0; i<arr.length; i++){
+			if(arr[i].name.indexOf(s) != -1 || arr[i].pin.indexOf(s) != -1 || arr[i].jp.indexOf(s) != -1){
+				var oLi = document.createElement("li");
+				oLi.innerHTML=arr[i].name+'<span>('+arr[i].pin+')</span>'
+				oUl.appendChild(oLi);
+			}
+		}
+	};
+};
+
+</script>
+
+</head>
+
+<body>
+输入原始文本(json格式)：<br>
+<textarea style="width:500px; height:200px;" id="txt1">
+[
+	{name: '张三', pin: 'zhang san'},
+	{name: '王斌', pin: 'wang bin'},
+	{name: '张春桥', pin: 'zhang chun qiao'},
+	{name: '帕多瓦', pin: 'pa duo wa'},
+	{name: '王彬', pin: 'wang bin'},
+	{name: '张超群', pin: 'zhang chao qun'},
+	{name: '王保平', pin: 'wang bao ping'},
+	{name: '钟伟强', pin: 'zhong wei qiang'}
+]
+</textarea><br>
+<br>
+<input type="text" id="txt2" /><br>
+<ul id="ul1">
+    <!--<li>张三<span>(zhang san)</span></li>-->
+</ul>
+</body>
+</html>
