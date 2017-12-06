@@ -10,22 +10,16 @@
     <script>
         window.onload = function () {
             var oBtn = document.getElementById('btn1');
-            //	function show(){
-            //		alert(this); // window
-            //	}
-            //	oBtn.onclick=function(){
-            //		show();	
-            //	}	
-            //改
             var _this = this;
 
             function show(_this) {
-                alert(_this);
+                console.log(_this);
             }
 
             oBtn.onclick = function () {
                 show(this);
-            }
+            };
+            show(_this);
         }
     </script>
 </head>

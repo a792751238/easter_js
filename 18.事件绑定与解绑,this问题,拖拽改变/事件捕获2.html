@@ -8,22 +8,22 @@
     </style>
     <script>
         window.onload = function () {
-            var oDiv1 = document.getElementById('div1');
-            var oDiv2 = document.getElementById('div2');
-            var oDiv3 = document.getElementById('div3');
-
-            oDiv1.addEventListener('click', function () {
-                alert(oDiv1.style.background);
+            _id('div1').addEventListener('click', function () {
+                alert(_id('div1').style.background);
             }, false);
 
 
-            oDiv2.addEventListener('click', function () {
-                alert(oDiv2.style.background);
+            _id('div2').addEventListener('click', function () {
+                alert(_id('div2').style.background);
             }, false);
 
-            oDiv3.addEventListener('click', function () {
-                alert(oDiv3.style.background);
+            _id('div3').addEventListener('click', function () {
+                alert(_id('div3').style.background);
             }, false);
+
+            function _id(id) {
+                return document.getElementById(id);
+            }
         }
     </script>
 </head>

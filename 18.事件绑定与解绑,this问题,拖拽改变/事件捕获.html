@@ -8,28 +8,30 @@
     </style>
     <script>
         window.onload = function () {
-            var oDiv1 = document.getElementById('div1');
-            var oDiv2 = document.getElementById('div2');
-            var oDiv3 = document.getElementById('div3');
-            oDiv1.onclick = function () {
+            _id('div1').onclick = function () {
                 alert(this.style.background);
-            }
-            oDiv2.onclick = function (e) {
+            };
+            _id('div2').onclick = function (e) {
                 alert(this.style.background);
                 e.stopPropagation()
-            }
-            oDiv3.onclick = function (eve) {
+            };
+            _id('div3').onclick = function (eve) {
                 alert(this.style.background);
                 stopEve(eve);
-            }
+            };
             //阻止事件冒泡
             function stopEve(event) {
                 var e = event || window.event;
                 if (e && e.stopPropagation) {
                     e.stopPropagation();
                 } else {
+                    //IE 6,7,8
                     e.cancelBubble = true;
                 }
+            }
+
+            function _id(id) {
+                return document.getElementById(id);
             }
         }
     </script>

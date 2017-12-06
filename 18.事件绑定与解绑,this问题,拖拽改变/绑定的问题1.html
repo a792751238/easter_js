@@ -1,30 +1,16 @@
 ﻿<!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-
-<title>绑定的问题</title>
-<style>
-*{ margin:0; padding:0; list-style:none; font-family: "微软雅黑","张海山锐线体简"}
-
-</style>
-<script>
-window.onload=function(){
-	document.addEventListener('contextmenu',function(ev){
-		//alert('abc');	
-		//return false;
-		var oEvt=ev||event;
-		//console.log(oEvt);
-		oEvt.preventDefault();		//阻止默认
-	},false);
-	
-	//document.oncontextmenu=function(ev){};
-};
-</script>
+    <meta charset="utf-8">
+    <title>绑定的问题</title>
 </head>
-
 <body>
-
-
+<div id="contextmenu"></div>
 </body>
+<script>
+    document.addEventListener(document.getElementById('contextmenu'), function (ev) {
+        var oEvt = ev || event;
+        oEvt.preventDefault();		//阻止默认
+    }, false);
+</script>
 </html>
