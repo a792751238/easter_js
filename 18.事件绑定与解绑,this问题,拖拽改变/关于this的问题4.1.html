@@ -3,12 +3,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="author" content="智能社 - zhinengshe.com" />
+    <meta name="author" content="智能社 - zhinengshe.com"/>
     <title>函数中this问题</title>
     <style>
     </style>
     <script>
-        window.onload = function() {
+        window.onload = function () {
             var oBtn = document.getElementById('btn1');
             //	function show(){
             //		alert(this); // window
@@ -22,7 +22,8 @@
             function show(_this) {
                 alert(_this);
             }
-            oBtn.onclick = function() {
+
+            oBtn.onclick = function () {
                 show(this);
             }
         }
@@ -30,7 +31,7 @@
 </head>
 
 <body>
-    <input type="button" value="点击" id="btn1">
+<input type="button" value="点击" id="btn1">
 </body>
 
 </html>
