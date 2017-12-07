@@ -1,0 +1,48 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>事件捕获</title>
+    <style>
+    </style>
+    <script>
+        window.onload = function () {
+            _id('div1').onclick = function () {
+                alert(this.style.background);
+            };
+            _id('div2').onclick = function (e) {
+                alert(this.style.background);
+                e.stopPropagation()
+            };
+            _id('div3').onclick = function (eve) {
+                alert(this.style.background);
+                stopEve(eve);
+            };
+            //阻止事件冒泡
+            function stopEve(event) {
+                var e = event || window.event;
+                if (e && e.stopPropagation) {
+                    e.stopPropagation();
+                } else {
+                    //IE 6,7,8
+                    e.cancelBubble = true;
+                }
+            }
+
+            function _id(id) {
+                return document.getElementById(id);
+            }
+        }
+    </script>
+</head>
+
+<body>
+<div id="div1" style="width:500px; height:500px; background:red;">
+    <div id="div2" style="height:300px; width:300px; background:yellow">
+        <div id="div3" style="width:100px; height:100px; background:blue"></div>
+    </div>
+</div>
+</body>
+
+</html>
