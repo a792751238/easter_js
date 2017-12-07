@@ -1,0 +1,40 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>json的去重</title>
+<style>
+*{ margin:0; padding:0; list-style:none; font-family: "微软雅黑","张海山锐线体简"}
+
+</style>
+<script>
+var  s = '冬新品 韩版 冬新品 长袖 韩版 冬新品 裤子 冬新品 长袖 套装 半身裙 长袖';
+
+//要的数据	'冬新品 韩版  长袖 裤子 套装 半身裙';
+var arr=s.split(' ');//[冬新品 韩版 冬新品 长袖 韩版 冬新品 裤子 冬新品 长袖 套装 半身裙 长袖]
+
+
+var json={};
+
+json.a=12;
+console.log(json); // {a:12}
+json.a=4;
+console.log(json);
+json.a=5;
+console.log(json);
+json.a=6;
+console.log(json);
+json.a=8;
+console.log(json);//{a:8}
+
+
+</script>
+</head>
+
+<body>
+
+<div id="div1"></div>
+
+</body>
+</html>

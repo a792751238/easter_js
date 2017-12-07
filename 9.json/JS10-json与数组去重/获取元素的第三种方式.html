@@ -1,0 +1,65 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>获取元素的第3个方法</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: "微软雅黑","张海山锐线体简"
+}
+
+div {
+    height: 50px;
+    margin: 10px;
+    background: #ccc;
+}
+    </style>
+    <script>
+        //window.onload=function(){
+         //	//var oDiv=document.getElementById('div1');	//一个
+         //	//var aDiv=document.getElementsByTagName('div');	//一堆 	
+         //	var aCurDiv=document.getElementsByClassName('cur');	//一堆
+         //	for(var i=0;i<aCurDiv.length;i++){
+         //		aCurDiv[i].style.background='red';	
+         //	}
+         //	
+         //};
+    </script>
+</head>
+
+<body>
+    <div id='div1'>
+        <div></div>
+        <div></div>
+        <div class="cur">cur</div>
+        <div></div>
+        <div></div>
+        <div class="cur">cur</div>
+        <div></div>
+        <div class="cur">cur</div>
+        <div></div>
+    </div>
+    <script type="text/javascript">
+//        var oDiv = document.getElementById('div1');
+//        var aDiv = oDiv.getElementsByTagName('div');
+//        for (var i = 0; i < aDiv.length; i++) {
+//            if (aDiv[i].className == 'cur') {
+//                aDiv[i].style.background = 'red';
+//            } else {
+//                aDiv[i].style.background = '';
+//            }
+//        }
+       var oDiv = document.getElementById('div1');
+       var aDiv = document.getElementsByClassName('cur');//与tagname相似，获取的是一堆元素
+	   for (var i=0;i<aDiv.length ;i++ )
+	   {
+		   aDiv[i].style.background='red';
+	   }
+    </script>
+</body>
+
+</html>

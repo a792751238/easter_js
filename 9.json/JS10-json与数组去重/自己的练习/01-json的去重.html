@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<HTML>
+
+<HEAD>
+    <meta charset="utf-8" />
+    <meta name="generator" content="editplus" />
+    <meta name="author" content="" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <TITLE>json转来转去</TITLE>
+</HEAD>
+
+<BODY>
+    <script type="text/javascript">
+        //json去重
+        var ae = 'you,you,you,me,me,ta,ta,ha,he';
+        var arr = ae.split(",");
+        console.log(ae);
+        console.log(arr);
+        var json = {};
+        for (var i = 0; i < arr.length; i++) {
+            var name = arr[i];
+            var value = '';
+            json[name] = value;
+        }
+        console.log(json);
+        var s = '';
+        for (var key in json) {
+            s = s + ' ' + key + ' ';
+        }
+        console.log(s);
+         
+         //		 //字符串的转化
+         //        var json2 = {};
+         //        var json = {
+         //            "季节": "夏天",
+         //            "天气": "晴天",
+         //            "温度": "好热"
+         //        };
+         //        var str5 = '';
+         //        for (var key in json) {
+         //            var arr5 = [];
+         //            arr5[0] = key;
+         //            arr5[1] = json[key];
+         //            str5 += '&' + arr5[0] + '=' + arr5[1];
+         //        }
+         //        console.log(str5.slice(1));
+         //        var str6 = str5.slice(1).toString();
+         //        var arr6 = str6.split("&");
+         //        for (var i = 0; i < arr6.length; i++) {
+         //            var arr7 = arr6[i].split('=');
+         //            //            var name=arr7[0];
+         //            //			var value=arr7[1];
+         //            //			json2[name]=value;
+         //            json2[arr7[0]] = arr7[1];
+         //        }
+         //        console.log(json2);
+    </script>
+</BODY>
+
+</HTML>

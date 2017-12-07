@@ -1,0 +1,45 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>json的去重,统计,排序</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-family: "微软雅黑", "张海山锐线体简"
+    }
+    </style>
+    <script>
+    var s = '冬新品 韩版 冬新品 长袖 韩版 冬新品 裤子 冬新品 长袖 套装 半身裙 长袖';
+    var arr = s.split(' ');
+    var json = {};
+    for (var i = 0; i < arr.length; i++) {
+        if (json[arr[i]]) {
+            json[arr[i]]++;
+        } else {
+            json[arr[i]] = 1;
+        }
+    }
+    console.log(json); //Object {冬新品: 4, 韩版: 2, 长袖: 3, 裤子: 1, 套装: 1…}
+    //整理	json--->string
+    //要的数据 冬新品(4) 韩版(3)  长袖(2) 裤子(1)...
+    //现在有的数据json={冬新品: 4, 韩版: 2, 长袖: 3, 裤子: 1, 套装: 1…}
+    //arr=[冬新品 韩版 冬新品 长袖 韩版 冬新] 
+
+    var s = '';
+    for (var key in json) {
+        //key	==	冬新品   键值
+        //json[key]	==	4    //键值对应的值
+        s = s + key + '(' + json[key] + ')' + ' ';
+    }
+    document.write(s); // 冬新品(4) 韩版(2) 长袖(3) 裤子(1) 套装(1) 半身裙(1)
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
