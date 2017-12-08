@@ -21,8 +21,8 @@
 
     //封装写法
     var oBtn = document.getElementById("btn1");
-    addEvent(oBtn, 'click', show);
-    addEvent(oBtn, 'click', show2);
+    _addEvent(oBtn, 'click', show);
+    _addEvent(oBtn, 'click', show2);
     //removeEvent(oBtn, 'click', show);
 
     //对象.addEventListener(事件名,函数,false);	for 高
@@ -55,6 +55,27 @@
 
     function show2() {
         alert("檀树");
+    }
+
+
+    function _addEvent(obj, type, fn) {
+        if (obj.attachEvent) {
+            //在dom对象下添加<'e' + type + fn>属性，并将fn赋值
+            obj['e' + type + fn] = fn;
+            // 给dom兑现的<type + fn>属性赋值一个匿名函数
+            obj[type + fn] = function () {
+                obj['e' + type + fn](window.event);
+            };
+            obj.attachEvent('on' + type, obj[type + fn]);
+        } else
+            obj.addEventListener(type, fn, false);
+    }
+    function _removeEvent(obj, type, fn) {
+        if (obj.detachEvent) {
+            obj.detachEvent('on' + type, obj[type + fn]);
+            obj[type + fn] = null;
+        } else
+            obj.removeEventListener(type, fn, false);
     }
 </script>
 </body>
