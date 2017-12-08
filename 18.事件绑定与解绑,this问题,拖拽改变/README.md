@@ -1,27 +1,27 @@
 #### event事件
 ###### 鼠标事件
-– mousedown鼠标设备按下一个元素的时候触发mousedown事件。
-– mouseup鼠标设备从按下的元素上弹起的时候触发mouseup事件。
-– click鼠标点击元素的时候触发click事件。
-– dblclick鼠标双击元素的时候触发dblclick事件。
-– mouseover鼠标移动到某元素上的时候触发mouseover事件。
-– mouseout鼠标从某元素离开的时候触发mouseout事件。
-– mousemove鼠标在某元素上移动但未离开的时候触发mousemove事件。
+– mousedown鼠标设备按下一个元素的时候触发mousedown事件
+– mouseup鼠标设备从按下的元素上弹起的时候触发mouseup事件
+– click鼠标点击元素的时候触发click事件
+– dblclick鼠标双击元素的时候触发dblclick事件
+– mouseover鼠标移动到某元素上的时候触发mouseover事件
+– mouseout鼠标从某元素离开的时候触发mouseout事件
+– mousemove鼠标在某元素上移动但未离开的时候触发mousemove事件
 ###### 键盘事件
-– keypress按键按下的时候触发该事件。
-– keydown按键按下的时候触发该事件，并且在keypress事件之前。
-– keyup按键松开的时候触发该事件，在keydown和keypress事件之后。
+– keypress按键按下的时候触发该事件
+– keydown按键按下的时候触发该事件，并且在keypress事件之前
+– keyup按键松开的时候触发该事件，在keydown和keypress事件之后
 ###### 表单事件
-– select文本字段（input, textarea等）的文本被选择的时候触发该事件。
-– change控件失去input焦点的时候触发该事件（或者值被改变的时候）。
-– submit表单提交的时候触发该事件。
-– reset表单重置的时候触发该事件。
-– focus元素获得焦点的时候触发该事件，通常来自鼠标设备或Tab导航。
-– blur元素失去焦点的时候触发该事件，通常来自鼠标设备或Tab导航。
+– select文本字段（input, textarea等）的文本被选择的时候触发该事件
+– change控件失去input焦点的时候触发该事件（或者值被改变的时候）
+– submit表单提交的时候触发该事件
+– reset表单重置的时候触发该事件
+– focus元素获得焦点的时候触发该事件，通常来自鼠标设备或Tab导航
+– blur元素失去焦点的时候触发该事件，通常来自鼠标设备或Tab导航
 ###### 其它事件
-– load页面加载完毕（包括内容、图片、frame、object）的时候触发该事件。
-– resize页面大小改变的时候触发该事件（例如浏览器缩放）。
-– scroll页面滚动的时候触发该事件。
+– load页面加载完毕（包括内容、图片、frame、object）的时候触发该事件
+– resize页面大小改变的时候触发该事件（例如浏览器缩放）
+– scroll页面滚动的时候触发该事件
 – unload从页面或frame删除所有内容的时候触发该事件（例如离开一个页面）
 
 #### 事件注册
