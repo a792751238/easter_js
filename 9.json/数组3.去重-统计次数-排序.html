@@ -15,12 +15,7 @@ window.onload=function(){
 	oBtn.onclick=function(){
 		var s = oT1.value;//	'衣服 运动鞋篮球鞋 衣服 休闲鞋'
 		var arr=s.split(' ');//	[衣服 运动鞋篮球鞋 跑步鞋 休闲鞋]
-		//要什么
-		//页面上面要的是什么 '跑步鞋(5)  休闲鞋(4) .. ..'	
-		//['跑步鞋(3)','休闲鞋(4)','..','...']
-		//[{name:跑步鞋,count:5},{},{},{}]
-		//{跑步鞋:3,休闲鞋:4,..,...}
-		//去重
+
 		var json={};
 		for(var i=0;i<arr.length;i++){
 			var key=arr[i];
