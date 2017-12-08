@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html>
 
 <head>
@@ -21,9 +21,7 @@
 
     //封装写法
     var oBtn = document.getElementById("btn1");
-    addEvent(oBtn, 'click', show);
-    addEvent(oBtn, 'click', show2);
-    //		 removeEvent(oBtn, 'click', show);
+    addEvent(oBtn, 'click', myEventHandler);
 
     //对象.addEventListener(事件名,函数,false);	for 高
     //事件名	onclick	over/out/down/up.........不带on
@@ -36,26 +34,16 @@
         }
     }
 
-    //解绑
-    //对象.removeEventListener(事件名,函数,false);  chrome FF IE 9 10
-    //对象.detachEvent(事件名,函数);        IE 6 7 8
-    // oBtn.detachEvent('onclick',show2);
-    //移除函数
-    function removeEvent(obj, eve, fn) {
-        if (obj.removeEventListener) {
-            obj.removeEventListener(eve, fn, false);
+    function myEventHandler(e) {
+        e = e || window.event;
+        // 防止默认行为
+        if (e.preventDefault) {
+            e.preventDefault();
         } else {
-            obj.detachEvent('on' + eve, fn);
+            e.returnValue = false;
         }
     }
 
-    function show() {
-        alert("弹出1");
-    }
-
-    function show2() {
-        alert("檀树");
-    }
 </script>
 </body>
 
