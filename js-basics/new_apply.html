@@ -9,39 +9,39 @@
 <body>
 </body>
 <script>
-Function.prototype.newApply = function(context, arr) {
-    var result, i, len;
-    context = context || window;
-    context.fn = this;
+    Function.prototype.newApply = function (context, arr) {
+        var result, i, len;
+        context = context || window;
+        context.fn = this;
 
-    if (!arr) {
-        result = context.fn;
-    } else {
-        var args = [];
-        for (i = 0, len = arr.length; i < len; i++) {
-            args.push('arr[' + i + ']');
+        if (!arr) {
+            result = context.fn;
+        } else {
+            var args = [];
+            for (i = 0, len = arr.length; i < len; i++) {
+                args.push('arr[' + i + ']');
+            }
+            result = eval('context.fn(' + args + ')');
         }
-        result = eval('context.fn(' + args + ')');
+
+        delete context.fn;
+        return result;
+    };
+
+    var obj = {
+        name: 'alice'
+    };
+
+    function func(age, sex) {
+        console.log(age);
+        console.log(sex);
+        console.log(this.name);
+        return {
+            name: this.name
+        }
     }
 
-    delete context.fn;
-    return result;
-}
-
-var obj = {
-    name: 'alice'
-}
-
-function func(age, sex) {
-    console.log(age);
-    console.log(sex);
-    console.log(this.name);
-    return {
-        name: this.name
-    }
-}
-
-console.log(func.apply(obj, [23, '女']));
+    console.log(func.apply(obj, [23, '女']));
 </script>
 
 </html>

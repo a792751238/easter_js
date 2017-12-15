@@ -1,36 +1,39 @@
 #### 方法
 ```
 graph LR
+Array-->Array.prototype.indexOf
 Array-->Array.prototype.splice
 Array-->Array.prototype.push
 Array-->Array.prototype.unshift
 Array-->Array.prototype.pop
 Array-->Array.prototype.shift
-Array-->Array.prototype.concat
+Array-->|合并两个或多个数组,返回新|Array.prototype.concat
 Array-->Array.prototype.slice
 Array-->Array.prototype.reverse
 Array-->Array.prototype.sort
 
-Array-->Array.from
-Array-->Array.isArray
-Array-->Array.of
-Array-->Array.prototype.copyWithin
-Array-->Array.prototype.fill
-Array-->Array.prototype.filter
-Array-->Array.prototype.find
-Array-->Array.prototype.findIndex
-Array-->Array.prototype.forEach
-Array-->Array.prototype.includes
-Array-->Array.prototype.join
-Array-->Array.prototype.keys
-Array-->Array.prototype.lastIndexOf
-Array-->Array.prototype.map
-Array-->Array.prototype.reduce
-Array-->Array.prototype.reduceRight
-Array-->Array.prototype.some
-Array-->Array.prototype.toLocalString
+Array-->|从类数组或可迭代对象中创建新的数组| Array.from
+Array-->|确定传递的值是否是一个 Array| Array.isArray
+Array-->|创建具有可变数量参数的新数组| Array.of
+Array-->|浅复制数组的一部分到同一数组中的另一个位置,并返回它|Array.prototype.copyWithin
+Array-->|返回一个新的Array Iterator对象|Array.prototype.entries
+Array-->|测试数组的所有元素是否通过了函数的测试|Array.prototype.every
+Array-->|用一个值填充数组从始到终的全部元素|Array.prototype.fill
+Array-->|通过函数测试的所有元素|Array.prototype.filter
+Array-->|返回满足测试函数的第一个元素的值|Array.prototype.find
+Array-->|返回满足测试函数的第一个元素的索引|Array.prototype.findIndex
+Array-->|对数组的每个元素执行一次提供的函数|Array.prototype.forEach
+Array-->|判断一个数组是否包含一个指定的值|Array.prototype.includes
+Array-->|将数组或类数组的元素连接到一个字符串|Array.prototype.join
+Array-->|返回一个新的Array迭代器,它包含数组中每个索引的键|Array.prototype.keys
+Array-->|返回指定元素在数组最后一个的索引|Array.prototype.lastIndexOf
+Array-->|数组中的每个元素都调用函数后返回的结果|Array.prototype.map
+Array-->|累加器和数组中的每个元素应用一个函数,将其减少为单个值|Array.prototype.reduce
+Array-->|同reduce,区别是从右向左|Array.prototype.reduceRight
+Array-->|测试数组中的某些元素是否函数测试|Array.prototype.some
+Array-->|返回一个字符串表示数组中的元素|Array.prototype.toLocalString
 Array-->Array.prototype.toSource
-Array-->Array.prototype.toString
+Array-->|返回一个字符串,表示指定的数组及其元素|Array.prototype.toString
 Array-->Array.prototype.values
 ```
 
