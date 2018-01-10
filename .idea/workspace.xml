@@ -1,15 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81782e51-8423-4765-a484-554880f72ee5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/30.设计模式/单例模式/1.对象字面量.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/30.设计模式/单例模式/2.构造函数.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/30.设计模式/单例模式/3.单例实践.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/30.设计模式/单例模式/4.单例实践2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/30.设计模式/单例模式/5.单例实践3.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/30.设计模式/单例模式/6.单例实践4.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/30.设计模式/单例模式/7.单例模式5.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/30.设计模式/单例模式/README.md" />
+    <list default="true" id="81782e51-8423-4765-a484-554880f72ee5" name="Default" comment="2017-12-15">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -84,11 +78,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="1.对象字面量.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="1.对象字面量.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/30.设计模式/单例模式/1.对象字面量.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="438">
               <caret line="17" column="8" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="5" column="8" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -124,7 +128,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/js-basics/new_apply.html" />
         <option value="$PROJECT_DIR$/js-basics/new_call.html" />
         <option value="$PROJECT_DIR$/js-basics/closure.html" />
         <option value="$PROJECT_DIR$/js-basics/bind.html" />
@@ -175,6 +178,7 @@
         <option value="$PROJECT_DIR$/30.设计模式/单例模式/6.单例实践4.html" />
         <option value="$PROJECT_DIR$/30.设计模式/单例模式/7.单例模式5.html" />
         <option value="$PROJECT_DIR$/30.设计模式/单例模式/1.对象字面量.html" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -230,10 +234,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="30.设计模式" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="单例模式" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -358,7 +358,7 @@
       <workItem from="1515393539350" duration="605000" />
       <workItem from="1515477076030" duration="1105000" />
       <workItem from="1515552451684" duration="1340000" />
-      <workItem from="1515553803281" duration="2400000" />
+      <workItem from="1515553803281" duration="3202000" />
     </task>
     <task id="LOCAL-00001" summary="2017-12-7">
       <created>1512637649254</created>
@@ -462,7 +462,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28488000" />
+    <option name="totallyTimeSpent" value="29290000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -506,13 +506,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/0.basics/execution.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/0.basics/scope_chain.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -757,6 +750,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="438">
           <caret line="17" column="8" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="5" column="8" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
           <folding />
         </state>
       </provider>
