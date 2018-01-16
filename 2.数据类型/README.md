@@ -95,7 +95,11 @@ console.log(Object.prototype.toString.call(f));//[object Object]
 console.log(Object.prototype.toString.call(g));//[object Function]
 console.log(Object.prototype.toString.call(h));//[object Error]
 console.log(Object.prototype.toString.call(i));//[object Date]
+console.log(Object.prototype.toString.call(/a/g));//[object RegExp]
 console.log(Object.prototype.toString.call(j));//[object Array]
+console.log(Object.prototype.toString.call(Math)); // [object Math]
+console.log(Object.prototype.toString.call(JSON)); // [object JSON]
+console.log(Object.prototype.toString.call(arguments)); // [object Arguments]
 };
 ```
 #### 数据类型转换

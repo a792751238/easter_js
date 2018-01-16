@@ -2,12 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81782e51-8423-4765-a484-554880f72ee5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2.数据类型/4-NaN.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2.数据类型/5-isNaN().html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2.数据类型/6-isNaN()实例.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2.数据类型/JS中的作用域.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/2.数据类型/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2.数据类型/README.md" afterPath="$PROJECT_DIR$/2.数据类型/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/index.html" afterPath="$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/定时器3-setTimeout新浪延时.html" afterPath="$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/定时器3-setTimeout新浪延时.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/新浪的历史图片.html" afterPath="$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/新浪的历史图片.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/1.jpg" afterPath="$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/img/1.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/1.png" afterPath="$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/img/1.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/2.jpg" afterPath="$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/img/2.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/3.jpg" afterPath="$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/img/3.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/4-3.淘宝 短信发送倒计时.gif" afterPath="$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/img/4-3.淘宝 短信发送倒计时.gif" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/4.jpg" afterPath="$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/img/4.jpg" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/bg.png" afterPath="$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/img/bg.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/history_arr.png" afterPath="$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/img/history_arr.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/nav.png" afterPath="$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/img/nav.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/nav1.png" afterPath="$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/img/nav1.png" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/tb_bg.png" afterPath="$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/img/tb_bg.png" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,8 +35,8 @@
       <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/2.数据类型/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="121" column="12" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
+            <state relative-caret-position="29">
+              <caret line="85" column="28" lean-forward="false" selection-start-line="85" selection-start-column="28" selection-end-line="85" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -98,11 +108,11 @@
         <option value="$PROJECT_DIR$/2.数据类型/6-isNaN()实例.html" />
         <option value="$PROJECT_DIR$/2.数据类型/1-JS的数据类型.html" />
         <option value="$PROJECT_DIR$/2.数据类型/2-JS数据类型转换.html" />
-        <option value="$PROJECT_DIR$/2.数据类型/README.md" />
         <option value="$PROJECT_DIR$/2.数据类型/7-变量作用域.html" />
         <option value="$PROJECT_DIR$/2.数据类型/9-变量作用域3.html" />
         <option value="$PROJECT_DIR$/2.数据类型/函数传参问题/4.html" />
         <option value="$PROJECT_DIR$/2.数据类型/作用域问题/JS中的作用域.html" />
+        <option value="$PROJECT_DIR$/2.数据类型/README.md" />
       </list>
     </option>
   </component>
@@ -174,6 +184,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\easterCat-project\easter_js\5.随机数,函数返回值,定时器基础\img" />
       <recent name="E:\easterCat-project\easter_js\2.数据类型" />
       <recent name="E:\easterCat-project\easter_js\5.随机数,函数返回值,定时器基础" />
       <recent name="E:\easterCat-project\easter_js\9.json" />
@@ -286,7 +297,7 @@
       <workItem from="1515552451684" duration="1340000" />
       <workItem from="1515553803281" duration="6152000" />
       <workItem from="1515980335666" duration="8000" />
-      <workItem from="1516066339168" duration="3312000" />
+      <workItem from="1516066339168" duration="5351000" />
     </task>
     <task id="LOCAL-00001" summary="2017-12-7">
       <created>1512637649254</created>
@@ -411,7 +422,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35560000" />
+    <option name="totallyTimeSpent" value="37599000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -473,13 +484,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/定时器5--setTimeout实例.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/课件及作业/push.html" />
     <entry file="file://$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/课件及作业/6-给div随机变色.html" />
     <entry file="file://$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/8-给div随机变色3.html">
@@ -521,7 +525,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/1.png">
+    <entry file="file://$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/img/1.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -759,10 +763,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/2.数据类型/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="121" column="12" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
+        <state relative-caret-position="29">
+          <caret line="85" column="28" lean-forward="false" selection-start-line="85" selection-start-column="28" selection-end-line="85" selection-end-column="28" />
           <folding />
         </state>
       </provider>
