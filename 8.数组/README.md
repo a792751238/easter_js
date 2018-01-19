@@ -73,6 +73,13 @@ arr.map(function (item, index, own) {
 })
 ```
 
+#### 数组去重
+- 1. 传统方法
+
+- 2. 对象键值的方法
+
+- 3. es6的Set和Map
+
 #### 数组创建
 ```
 //var arr = new Array();一般不用
