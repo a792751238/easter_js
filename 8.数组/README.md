@@ -75,10 +75,14 @@ arr.map(function (item, index, own) {
 
 #### 数组去重
 - 1. 传统方法
-
-- 2. 对象键值的方法
-
+- 2. 对象键值的方法(hash)
 - 3. es6的Set和Map
+
+#### 数组展开
+- 1.传统遍历
+- 2.toString转字符串
+- 3.reduce
+- 4.es6扩展运算符 ...
 
 #### 数组创建
 ```
