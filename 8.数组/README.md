@@ -7,10 +7,10 @@ Array-->Array.prototype.push
 Array-->Array.prototype.unshift
 Array-->Array.prototype.pop
 Array-->Array.prototype.shift
-Array-->|合并两个或多个数组,返回新|Array.prototype.concat
-Array-->Array.prototype.slice
+Array-->|合并两个或多个数组,返回新数组|Array.prototype.concat
+Array-->|含有提取元素的新数组| Array.prototype.slice
 Array-->Array.prototype.reverse
-Array-->Array.prototype.sort
+Array-->|返回排序后的数组,原数组替换| Array.prototype.sort
 
 Array-->|从类数组或可迭代对象中创建新的数组| Array.from
 Array-->|确定传递的值是否是一个 Array| Array.isArray
