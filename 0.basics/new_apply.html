@@ -24,6 +24,7 @@
             result = eval('context.fn(' + args + ')');
         }
 
+        //result = context.fn(...arr);
         delete context.fn;
         return result;
     };

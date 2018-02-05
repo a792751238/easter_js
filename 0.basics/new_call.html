@@ -10,11 +10,13 @@
 </body>
 <script>
     Function.prototype.call2 = function (context) {
-        console.log(arguments);
         // 如果传入的为null，则指向window
         context = context || window;
         // 函数调用的时候，this指向调用的函数
         context.fn = this;
+
+        console.log(this);
+        console.log('上下文环境', context);
 
         var args = [];
         for (var i = 1, len = arguments.length; i < len; i++) {
@@ -36,9 +38,6 @@
     }
 
     function func(age, sex) {
-        console.log(age);
-        console.log(sex);
-        console.log(this.name);
         return {
             name: this.name,
             age: age,

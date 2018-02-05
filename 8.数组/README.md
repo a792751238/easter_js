@@ -84,6 +84,10 @@ arr.map(function (item, index, own) {
 - 3.reduce
 - 4.es6扩展运算符 ...
 
+#### 数组拷贝
+- 数组的浅拷贝slice和concat
+- 数组的深拷贝JSON.parse和JSON.stringify;
+
 #### 数组创建
 ```
 //var arr = new Array();一般不用
