@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="81782e51-8423-4765-a484-554880f72ee5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/8.数组/11.数组的copy.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/0.basics/new_apply.html" afterPath="$PROJECT_DIR$/0.basics/new_apply.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/0.basics/new_call.html" afterPath="$PROJECT_DIR$/0.basics/new_call.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/0.basics/typeid_new.html" afterPath="$PROJECT_DIR$/0.basics/typeid_new.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/0.basics/execution.html" afterPath="$PROJECT_DIR$/0.basics/execution.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/18.事件绑定与解绑,this问题,拖拽改变/关于this的问题4.1.html" afterPath="$PROJECT_DIR$/18.事件绑定与解绑,this问题,拖拽改变/关于this的问题4.1.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/8.数组/README.md" afterPath="$PROJECT_DIR$/8.数组/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -22,11 +20,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="typeid_new.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/0.basics/typeid_new.html">
+      <file leaf-file-name="execution.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/0.basics/execution.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="978">
-              <caret line="65" column="5" lean-forward="false" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
+            <state relative-caret-position="960">
+              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/8.数组/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="809">
+              <caret line="206" column="58" lean-forward="false" selection-start-line="206" selection-start-column="58" selection-end-line="206" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -52,8 +60,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/课件及作业/定时器2-替换背景.html" />
-        <option value="$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/课件及作业/定时器3-setTimeout新浪延时.html" />
         <option value="$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/课件及作业/定时器4-图片自动切换实例.html" />
         <option value="$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/课件及作业/定时器5--setTimeout实例.html" />
         <option value="$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/课件及作业/common.js" />
@@ -98,11 +104,13 @@
         <option value="$PROJECT_DIR$/8.数组/数组展开.html" />
         <option value="$PROJECT_DIR$/8.数组/10.数组展开.html" />
         <option value="$PROJECT_DIR$/8.数组/9.数组去重.html" />
-        <option value="$PROJECT_DIR$/8.数组/README.md" />
         <option value="$PROJECT_DIR$/8.数组/11.数组的copy.html" />
         <option value="$PROJECT_DIR$/0.basics/new_call.html" />
         <option value="$PROJECT_DIR$/0.basics/new_apply.html" />
         <option value="$PROJECT_DIR$/0.basics/typeid_new.html" />
+        <option value="$PROJECT_DIR$/18.事件绑定与解绑,this问题,拖拽改变/关于this的问题4.1.html" />
+        <option value="$PROJECT_DIR$/0.basics/execution.html" />
+        <option value="$PROJECT_DIR$/8.数组/README.md" />
       </list>
     </option>
   </component>
@@ -133,6 +141,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -155,13 +164,26 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="0.basics" />
+              <option name="myItemId" value="30.设计模式" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="easter_js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="easter_js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="8.数组" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -173,16 +195,16 @@
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\easterCat-project\easter_js\8.数组" />
-      <recent name="E:\easterCat-project\easter_js\2.数据类型" />
-      <recent name="E:\easterCat-project\easter_js" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\easterCat-project\easter_js\5.随机数,函数返回值,定时器基础\img" />
       <recent name="E:\easterCat-project\easter_js\2.数据类型" />
       <recent name="E:\easterCat-project\easter_js\5.随机数,函数返回值,定时器基础" />
       <recent name="E:\easterCat-project\easter_js\9.json" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\easterCat-project\easter_js\8.数组" />
+      <recent name="E:\easterCat-project\easter_js\2.数据类型" />
+      <recent name="E:\easterCat-project\easter_js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -300,7 +322,11 @@
       <workItem from="1516880875310" duration="1204000" />
       <workItem from="1516930774870" duration="6569000" />
       <workItem from="1517465667210" duration="598000" />
-      <workItem from="1517793143988" duration="51000" />
+      <workItem from="1517793143988" duration="128000" />
+      <workItem from="1517794214483" duration="4620000" />
+      <workItem from="1517879011766" duration="25000" />
+      <workItem from="1519963199215" duration="2422000" />
+      <workItem from="1523263044216" duration="713000" />
     </task>
     <task id="LOCAL-00001" summary="2017-12-7">
       <created>1512637649254</created>
@@ -428,14 +454,22 @@
       <option name="project" value="LOCAL" />
       <updated>1516349343165</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="2017-2-5">
+      <created>1517793205356</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1517793205356</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52198000" />
+    <option name="totallyTimeSpent" value="60055000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -443,7 +477,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29577464" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29545453" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -487,7 +521,8 @@
     <MESSAGE value="2017-12-8" />
     <MESSAGE value="2017-12-15" />
     <MESSAGE value="2017-1-19" />
-    <option name="LAST_COMMIT_MESSAGE" value="2017-1-19" />
+    <MESSAGE value="2017-2-5" />
+    <option name="LAST_COMMIT_MESSAGE" value="2017-2-5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -496,34 +531,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/课件及作业/2-return应用getId().html.bak" />
-    <entry file="file://$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/1-函数详解-return.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" column="12" lean-forward="false" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/2-return应用getId().html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/img/1.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/课件及作业/定时器—妙表练习/秒表5.html" />
-    <entry file="file://$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/秒表6.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-270">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/5.随机数,函数返回值,定时器基础/新浪的历史图片.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1230">
@@ -569,13 +576,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="438">
           <caret line="17" column="8" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" column="8" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -655,20 +655,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2.数据类型/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="105" column="16" lean-forward="true" selection-start-line="105" selection-start-column="16" selection-end-line="105" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/30.设计模式/README.MD">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" column="9" lean-forward="false" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/8.数组/10.数组展开.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="348">
@@ -680,13 +666,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
           <caret line="57" column="34" lean-forward="false" selection-start-line="57" selection-start-column="34" selection-end-line="57" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/8.数组/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="71" column="29" lean-forward="false" selection-start-line="71" selection-start-column="29" selection-end-line="71" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -709,7 +688,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -717,6 +695,77 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="978">
           <caret line="65" column="5" lean-forward="false" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/0.basics/vo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-180">
+          <caret line="3" column="6" lean-forward="true" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="5" column="8" lean-forward="true" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/18.事件绑定与解绑,this问题,拖拽改变/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="10" column="11" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/18.事件绑定与解绑,this问题,拖拽改变/关于this的问题4.1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="25" column="40" lean-forward="true" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/18.事件绑定与解绑,this问题,拖拽改变/关于this的问题.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-582">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/30.设计模式/README.MD">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="5" column="9" lean-forward="false" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/0.basics/scope.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="8" column="6" lean-forward="true" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2.数据类型/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-361">
+          <caret line="105" column="16" lean-forward="true" selection-start-line="105" selection-start-column="16" selection-end-line="105" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/0.basics/execution.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/8.数组/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="809">
+          <caret line="206" column="58" lean-forward="false" selection-start-line="206" selection-start-column="58" selection-end-line="206" selection-end-column="58" />
           <folding />
         </state>
       </provider>

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>执行上下文</title>
 </head>
 
 <body>
@@ -34,36 +34,34 @@
     var color = 'blue';
 
     function changeColor() {
-        var anotherColor = 'red';
+        var color = 'red';
 
         function swapColors() {
-            var tempColor = anotherColor;
-            anotherColor = color;
-            color = tempColor;
+            return color;
         }
 
-        swapColors();
+        return swapColors();
     }
 
-    changeColor();
+    console.log(changeColor());
 
-    var name = "window";
-
-    var p = {
-        name: 'Perter',
-        getName: function () {
-            console.log(this);
-            // 利用变量保存的方式保证其访问的是p对象
-            var self = this;
-            return function () {
-                return self.name;
-            }
-        }
-    };
-
-    var getName = p.getName();
-    var _name = getName();
-    console.log(_name);
+//    var name = "window";
+//
+//    var p = {
+//        name: 'Perter',
+//        getName: function () {
+//            console.log(this);
+//            // 利用变量保存的方式保证其访问的是p对象
+//            var self = this;
+//            return function () {
+//                return self.name;
+//            }
+//        }
+//    };
+//
+//    var getName = p.getName();
+//    var _name = getName();
+//    console.log(_name);
 </script>
 
 </html>

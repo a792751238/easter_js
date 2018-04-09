@@ -2,24 +2,16 @@
 ```
 graph LR
 Array-->Array.prototype.indexOf
-Array-->Array.prototype.splice
-Array-->Array.prototype.push
-Array-->Array.prototype.unshift
-Array-->Array.prototype.pop
-Array-->Array.prototype.shift
-Array-->|合并两个或多个数组,返回新数组|Array.prototype.concat
-Array-->|含有提取元素的新数组| Array.prototype.slice
 Array-->Array.prototype.reverse
-Array-->|返回排序后的数组,原数组替换| Array.prototype.sort
-
-Array-->|从类数组或可迭代对象中创建新的数组| Array.from
-Array-->|确定传递的值是否是一个 Array| Array.isArray
-Array-->|创建具有可变数量参数的新数组| Array.of
+Array-->Array.prototype.sort
 Array-->|浅复制数组的一部分到同一数组中的另一个位置,并返回它|Array.prototype.copyWithin
 Array-->|返回一个新的Array Iterator对象|Array.prototype.entries
 Array-->|测试数组的所有元素是否通过了函数的测试|Array.prototype.every
 Array-->|用一个值填充数组从始到终的全部元素|Array.prototype.fill
-Array-->|通过函数测试的所有元素|Array.prototype.filter
+Array-->Array.prototype.filter
+Array.prototype.filter-->返回一个通常测试的新数组
+Array.prototype.filter-->不会改变原数组
+Array.prototype.filter-->callback[,thisArg]
 Array-->|返回满足测试函数的第一个元素的值|Array.prototype.find
 Array-->|返回满足测试函数的第一个元素的索引|Array.prototype.findIndex
 Array-->|对数组的每个元素执行一次提供的函数|Array.prototype.forEach
@@ -37,7 +29,58 @@ Array-->|返回一个字符串,表示指定的数组及其元素|Array.prototype
 Array-->Array.prototype.values
 ```
 
+```
+graph LR
+Array-->|从类数组或可迭代对象中创建新的数组| Array.from
+Array-->|确定传递的值是否是一个 Array| Array.isArray
+Array-->|创建具有可变数量参数的新数组| Array.of
+```
 
+```
+graph LR
+Array-->Array.prototype.unshift
+Array.prototype.unshift-->从头部添加一条或多条数据
+Array.prototype.unshift-->unshift原数组修改
+Array.prototype.unshift-->返回值是添加后的数组长度
+
+Array-->Array.prototype.pop
+Array.prototype.pop-->从尾部删除一条数据
+Array.prototype.pop-->返回被删除的数据
+Array.prototype.pop-->传入参数无效
+Array.prototype.pop-->pop原数组修改
+
+Array-->Array.prototype.shift
+Array.prototype.shift-->从头部删除一条数据
+Array.prototype.shift-->返回值是删除的数据
+Array.prototype.shift-->原数组修改
+
+Array-->Array.prototype.push
+Array.prototype.push-->从尾部推入
+Array.prototype.push-->push原数组修改
+Array.prototype.push-->返回值是推入后的数组长度
+Array.prototype.push-->可以同时推入多个数据
+```
+
+```
+graph LR
+Array-->|合并两个或多个数组,返回新数组|Array.prototype.concat
+Array.prototype.concat-->数组+数组=string
+Array.prototype.concat-->原数组不修改,返回新数组
+Array.prototype.concat-->拼接的数据可以是数组/数字/字符
+
+Array-->Array.prototype.splice
+Array.prototype.splice--> splice返回一个新数组,值为删除的数据
+Array.prototype.splice-->可以插入一个或多个数据,也可以不插入
+Array.prototype.splice-->原数组会修改,一般数组删除可以用splice
+Array.prototype.splice-->参数:起点,要删除的个数,要插入的数据
+Array.prototype.splice-->可以模拟pop,push,shift,unshift
+
+Array-->Array.prototype.slice
+Array.prototype.slice-->返回截取数据的新数组
+Array.prototype.slice-->参数可以为负值
+Array.prototype.slice-->原数组不变
+Array.prototype.slice-->最后的一位并不包括
+```
 #### 数组是引用类型
 - 引用类型：值不保存在变量本地的数据类型：当赋值的时候会改变，一变全变
 - 基本类型：赋值时候，相当于重新开辟了一个内存空间，因此改变值的时候并不对其他赋值对象有影响，只改变自己
@@ -72,7 +115,6 @@ arr.map(function (item, index, own) {
     console.log(index + '==>' + item)
 })
 ```
-
 #### 数组去重
 - 1. 传统方法
 - 2. 对象键值的方法(hash)
@@ -83,10 +125,6 @@ arr.map(function (item, index, own) {
 - 2.toString转字符串
 - 3.reduce
 - 4.es6扩展运算符 ...
-
-#### 数组拷贝
-- 数组的浅拷贝slice和concat
-- 数组的深拷贝JSON.parse和JSON.stringify;
 
 #### 数组创建
 ```
@@ -100,78 +138,6 @@ console.log(arr[2]);
 console.log(arr);
 //伪数组也可以遍历，也获取index，也有length，但是没有方法，终究不是数组
 ```
-
-#### Array.prototype.push
-```
-var arr = ['猫', '狗', '老鼠'];
-//        arrObj.push(数据);	push 尾部推入  修改原数组	返回数组长度 数据可以有多个
-var length = arr.push('龙');
-console.log(length); // 4
-arr.push('猴', '蛇');
-arr.push(['牛', '鸡']);
-console.log(arr.push(['猪', '兔'])); // 8
-```
-1. 从尾部推入
-2. 原数组修改
-3. 返回值是推入后的数组长度
-4. 可以同时推入多个数据
-
-
-#### Array.prototype.pop
-```
-var arr2 = [123, 234, 534, 456, 989];
-var result = arr2.pop(); //pop 尾部删除一条数据 返回被删除的数据,无参数
-console.log(result); //989
-console.log(arr2); //[123, 234, 534, 456]
-console.log(arr2.pop(123)); //456
-```
-1. 从尾部删除一条数据
-2. 返回被删除的数据
-3. 传入参数无效
-4. 原数组修改
-
-
-#### Array.prototype.unshift
-```
-var arr = [456, 611, 844, 131, 156];
-var result = arr.unshift(213);	//头部推入数据,
-console.log(result);
-console.log(arr);//[213, 456, 611, 844, 131, 156]
-```
-1. 从头部添加一条或多条数据
-2. 原数组修改
-3. 返回值是添加后的数组长度
-
-
-#### Array.prototype.shift
-```
-var arr2 = [456, 611, 844, 131, 156];
-var res = arr2.shift(131);
-console.log(res); //456
-console.log(arr2); // [611, 844, 131, 156]
-```
-1. 从头部删除一条数据
-2. 返回值是删除的数据
-3. 原数组修改
-
-
-#### 数组连接Array.prototype.concat
-```
-var arr = [99, 101, '猫'];
-var arr2 = ['山羊', '艾伦'];
-
-console.log(typeof (arr + arr2));	//数组+数组	==string
-arr.concat(arr2);
-console.log(arr);//[99, 101, '猫']
-console.log(arr2);	//['山羊', '艾伦']不修改原数组
-console.log(arr.concat(arr2));	//返回新数组
-console.log(arr.concat(arr2, '狗'));
-console.log(arr.concat(['大象', '羊驼'], arr2, 111, '橘猫'));//[99, 101, "猫", "大象", "羊驼", "山羊", "艾伦", 111, "橘猫"]
-```
-1. 数组 + 数组 = string
-2. 原数组不修改,返回新数组
-3. 拼接的数据可以是数组/数字/字符
-
 
 #### 数组反转Array.prototype.reverse
 ```
@@ -230,43 +196,6 @@ arr2.sort(function (a, b) {
 console.log(arr2);//[3511, 634, 563, 455, 123]
 ```
 1. 默认的排序是按照字符编码的顺序进行排序
-
-
-#### 数组修改Array.prototype.splice
-```
-//arrObj.splice(起点,要删除的个数,要插入的数据);
-var arr = ['龙', '虎', '斗'];
-var result = arr.splice(1, 2, '野', '鸡'); //插入	要删除的个数=0  插入的数据可以插入多个,也可以没有
-console.log(arr);
-console.log(result);//['虎','斗'] 返回一个新数组，值是删除的数据
-
-var arr2 = ['龙', '虎', '斗'];
-arr2.splice(arr2.length, 0, '无');//模拟push，尾部推入
-console.log(arr2); //["龙", "虎", "斗", "无"]
-arr2.splice(arr.length, 1); //pop，头部删除
-console.log(arr2);//["龙", "虎", "斗"]
-arr2.splice(0, 0, '间'); // unshift
-console.log(arr2); //["间", "龙", "虎", "斗"]
-arr2.splice(0, 1); //shift
-console.log(arr2);//["龙", "虎", "斗"]
-```
-1. splice返回一个新数组，值为删除的数据
-2. 可以插入一个或多个数据，也可以不插入
-3. 原数组会修改,一般数组删除可以用splice
-
-
-#### Array.prototype.slice
-```
-var arr6 = [1, 2, 3, 4, 5, 6, 7];
-var arr7 = arr6.slice(0, 4);//与字符的差不多，最后的一位并不包括
-var arr8 = arr6.slice(-5, -1);
-console.log(arr8);//[3, 4, 5, 6]返回截取的新数组
-console.log(arr7);//[1, 2, 3, 4]参数可以为负值
-console.log(arr6);//[1, 2, 3, 4, 5, 6, 7]原数组不变
-```
-1. 返回一个新数组，值为截取的数据
-2. 原数组不改变
-3. 参数可以为负值
 
 #### 字符串和数组
 - split字符串转数组
