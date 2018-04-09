@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="81782e51-8423-4765-a484-554880f72ee5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/0.basics/execution.html" afterPath="$PROJECT_DIR$/0.basics/execution.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/18.事件绑定与解绑,this问题,拖拽改变/关于this的问题4.1.html" afterPath="$PROJECT_DIR$/18.事件绑定与解绑,this问题,拖拽改变/关于this的问题4.1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/8.数组/README.md" afterPath="$PROJECT_DIR$/8.数组/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -326,7 +323,7 @@
       <workItem from="1517794214483" duration="4620000" />
       <workItem from="1517879011766" duration="25000" />
       <workItem from="1519963199215" duration="2422000" />
-      <workItem from="1523263044216" duration="713000" />
+      <workItem from="1523263044216" duration="844000" />
     </task>
     <task id="LOCAL-00001" summary="2017-12-7">
       <created>1512637649254</created>
@@ -461,11 +458,18 @@
       <option name="project" value="LOCAL" />
       <updated>1517793205356</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="2017-4-9">
+      <created>1523263769812</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1523263769812</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60055000" />
+    <option name="totallyTimeSpent" value="60186000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -522,7 +526,8 @@
     <MESSAGE value="2017-12-15" />
     <MESSAGE value="2017-1-19" />
     <MESSAGE value="2017-2-5" />
-    <option name="LAST_COMMIT_MESSAGE" value="2017-2-5" />
+    <MESSAGE value="2017-4-9" />
+    <option name="LAST_COMMIT_MESSAGE" value="2017-4-9" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
