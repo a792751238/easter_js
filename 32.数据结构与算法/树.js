@@ -123,7 +123,6 @@
         return null;
     }
 
-
     var found = nums.find(23);
     console.log(found);
     console.log(nums.getMin());
