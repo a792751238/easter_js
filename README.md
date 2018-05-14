@@ -1,7 +1,4 @@
 #### hello world
-
-
-
 ```
 graph TB
 word-->获取到查询条件
