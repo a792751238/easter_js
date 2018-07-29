@@ -7,5 +7,136 @@
 <body>
 
 </body>
-<script src="./树.js"></script>
+<script>
+    /**
+     * Created by easterCat on 2018/4/23.
+     */
+    (function (w) {
+        function Node(data, left, right) {
+            this.data = data;
+            this.left = left;
+            this.right = right;
+            this.show = show;
+        }
+
+        function show() {
+            return this.data;
+        }
+
+        function Bst() {
+            this.root = null;
+            this.insert = insert;
+            this.inOrder = inOrder;
+            this.preOrder = preOrder;
+            this.postOrder = postOrder;
+            this.getMax = getMax;
+            this.getMin = getMin;
+            this.find = find;
+        }
+
+        function insert(data) {
+            var node = new Node(data, null, null);
+
+            if (this.root === null) {
+                //设置为根节点
+                this.root = node;
+            } else {
+                var cur = this.root;
+                var par;
+                while (true) {
+                    par = cur;
+                    if (data < cur.data) {
+                        cur = cur.left;
+                        if (cur === null) {
+                            par.left = node;
+                            break;
+                        }
+                    } else {
+                        cur = cur.right;
+                        if (cur === null) {
+                            par.right = node;
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        function inOrder(node) {
+            if (node !== null) {
+                inOrder(node.left);
+                document.write(node.data + '</br>')
+                inOrder(node.right);
+            }
+        }
+
+        function preOrder(node) {
+            if (node !== null) {
+                document.write(node.data + '</br>')
+                preOrder(node.left);
+                preOrder(node.right);
+            }
+        }
+
+        function postOrder(node) {
+            if (node !== null) {
+                postOrder(node.left);
+                postOrder(node.right);
+                document.write(node.data + '</br>')
+            }
+        }
+
+        /*测试插入节点和三种遍历二叉树的方式*/
+        var nums = new Bst();
+        nums.insert(23);
+        nums.insert(45);
+        nums.insert(16);
+        nums.insert(37);
+        nums.insert(3);
+        nums.insert(99);
+        nums.insert(22);
+        document.write("中序: </br>")
+        inOrder(nums.root);
+        document.write("前序: </br>")
+        preOrder(nums.root);
+        document.write("后序: </br>")
+        postOrder(nums.root);
+
+
+        function getMin() {
+            var current = this.root;
+            if (!(current.left === null)) {
+                current = current.left;
+            }
+            return current.left;
+        }
+
+        function getMax() {
+            var current = this.root;
+            if (!(current.right === null)) {
+                current = current.right;
+            }
+            return current.right;
+        }
+
+        function find(data) {
+            var current = this.root;
+            while (current !== null) {
+                if (current.data === data) {
+                    return current
+                } else if (data < current.data) {
+                    current = current.left
+                } else {
+                    current = current.right
+                }
+            }
+            return null;
+        }
+
+        var found = nums.find(23);
+        console.log(found);
+        console.log(nums.getMin());
+        console.log(nums.getMax());
+    })(window);
+</script>
 </html>
