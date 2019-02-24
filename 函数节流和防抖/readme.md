@@ -23,7 +23,9 @@
   </script>
 ```
 
-#### 使用 setTimeout 进行延迟处理，每次触发事件时都清除掉之前的方法
+#### 简单的防抖
+
+> 使用 setTimeout 进行延迟处理，每次触发事件时都清除掉之前的方法
 
 ```
   <script>
@@ -46,7 +48,9 @@
   </script>
 ```
 
-#### 但是目前有一个问题，就是代码耦合，这样不够优雅（b 格），将防抖和变色分离一下
+#### 抽离 debounce
+
+> 但是目前有一个问题，就是代码耦合，这样不够优雅（b 格），将防抖和变色分离一下
 
 ```
   <script>
@@ -81,7 +85,9 @@
   </script>
 ```
 
-#### 当然 debounce 在一些有成熟的实现，underscore.js 的 debounce
+#### underscore.js 的 debounce
+
+> underscore.js 实现的 debounce 已经经过人民群众的检验
 
 ```
 //1.9.1
@@ -117,7 +123,9 @@
 
 ### 函数节流(throttle)
 
-#### 一个事件频繁触发，但是在 xxx 秒内只能执行一次代码
+#### 简单的节流
+
+> 一个事件频繁触发，但是在 xxx 秒内只能执行一次代码
 
 ```
 //上面的变色在节流中就是这样写了
@@ -140,7 +148,9 @@
   </script>
 ```
 
-#### 跟上面的防抖差不多，随便分离一下，降低代码的耦合度
+#### 分离出 throttle 函数
+
+> 跟上面的防抖差不多，随便分离一下，降低代码的耦合度
 
 ```
 <script>
@@ -180,7 +190,7 @@
   </script>
 ```
 
-#### underscore 中关于 throttle 的实现
+#### underscore.js 中 throttle 函数实现
 
 ```
   _.throttle = function(func, wait, options) {
@@ -227,22 +237,25 @@
 
 ### 防抖和节流是用来干啥的？
 
-#### 防抖
+#### 防抖的用处
 
 - 绑定 scroll 滚动事件,resize 监听事件
 - 鼠标点击，执行一个异步事件，相当于让用户连续点击事件只生效一次（很有用吧）
 - 还有就是输入框校验事件（但是不一定好使，比如校验银行卡长度，当你输入完之后已经超出 100 个字符，正常应该是超出就提示错误信息）
 
-#### 节流
+#### 节流的用处
 
 - 当然还是鼠标点击啦，但是这个是限制用户点击频率。类似于你拿把 ak47 射击，枪的射速是 100 发/分钟,但是的手速达到 1000 按/分钟，就要限制一下喽（防止恶意刷子）
-- 加载更多的功能
+- 根据屏幕滚动到底部加载更多的功能
 
 > 其实二者主要就是为了解决短时间内连续多次重复触发和大量的 DOM 操作的问题，来进行性能优化（重点是同时还能接着办事，并不耽误）
 > 防抖主要是一定在 xxx 秒后执行,而节流主要是在 xxx 内执行（时间之后，时间之内）
+
+右边那个快速目录就是加了个 throttle，控制台的执行速度就减少了（快速目录是看了掘金的目录之后弄的，确实方便了好多，对于长文本的阅读体验好了不少）
 
 文章写的时候用的 underscore 1.8.2 版本，实现也是参考 underscore 的源码，实现方式与 underscore 最新有些代码还是不太一样了。（功能还是相同的）
 
 - [underscorejs API](https://underscorejs.org/)
 - [underscorejs 源码](https://github.com/jashkenas/underscore/blob/d5fe0fd4060f13b40608cb9d92eda6d857e8752c/underscore.js)
 - [伢羽 underscore 防抖](https://github.com/mqyqingfeng/Blog/issues/22)
+- [伢羽 underscore 节流](https://github.com/mqyqingfeng/Blog/issues/26)
