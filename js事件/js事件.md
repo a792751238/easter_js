@@ -1,41 +1,11 @@
 ## 面试题 event 事件
 
-- 1. 事件委托是什么？
-- 2. 如何阻止事件冒泡,阻止默认事件呢？
-- 3. Javascript 的事件流模型都有什么？
-- 4. 事件绑定和普通事件有什么区别？
+- 事件委托是什么？
+- 如何阻止事件冒泡,阻止默认事件呢？
+- Javascript 的事件流模型都有什么？
+- 事件绑定和普通事件有什么区别？
 
-#### 鼠标事件
-
-- mousedown 鼠标设备按下一个元素的时候触发 mousedown 事件
-- mouseup 鼠标设备从按下的元素上弹起的时候触发 mouseup 事件
-- click 鼠标点击元素的时候触发 click 事件
-- dblclick 鼠标双击元素的时候触发 dblclick 事件
-- mouseover 鼠标移动到某元素上的时候触发 mouseover 事件
-- mouseout 鼠标从某元素离开的时候触发 mouseout 事件
-- mousemove 鼠标在某元素上移动但未离开的时候触发 mousemove 事件
-
-#### 键盘事件
-
-- keypress 按键按下的时候触发该事件
-- keydown 按键按下的时候触发该事件，并且在 keypress 事件之前
-- keyup 按键松开的时候触发该事件，在 keydown 和 keypress 事件之后
-
-#### 表单事件
-
-- select 文本字段（input, textarea 等）的文本被选择的时候触发该事件
-- change 控件失去 input 焦点的时候触发该事件（或者值被改变的时候）
-- submit 表单提交的时候触发该事件
-- reset 表单重置的时候触发该事件
-- focus 元素获得焦点的时候触发该事件，通常来自鼠标设备或 Tab 导航
-- blur 元素失去焦点的时候触发该事件，通常来自鼠标设备或 Tab 导航
-
-#### 其它事件
-
-- load 页面加载完毕（包括内容、图片、frame、object）的时候触发该事件
-- resize 页面大小改变的时候触发该事件（例如浏览器缩放）
-- scroll 页面滚动的时候触发该事件
-- unload 从页面或 frame 删除所有内容的时候触发该事件（例如离开一个页面）
+![event](https://github.com/easterCat/common_js/blob/master/js%E4%BA%8B%E4%BB%B6/img/3.png?raw=true)
 
 ## Event 对象
 
@@ -126,11 +96,13 @@ addEvent(oBtn, 'click', function(){
 });
 ```
 
-![]()
+![arguments对象](https://github.com/easterCat/common_js/blob/master/js%E4%BA%8B%E4%BB%B6/img/1.png?raw=true)
 
 > W3C 和微软模型还有其他的少许差异，callee 是返回正在被执行的 function 函数，也就是所指定的 function 对象的正文。arguments.callee 知道就好了，别在代码中用了
 
-## 事件冒泡
+## 事件冒泡和捕获
+
+当年，IE 是冒泡流，而网景是捕获流，W3C 费些力使 JS 支持了冒泡流和捕获流。但是前些年或者更之前的时候，IE 还是老大，于是早期的 IE 浏览器并不支持捕获。
 
 ### 冒泡
 
@@ -386,22 +358,62 @@ addEvent(oBtn, 'click', function(){
 </html>
 ```
 
+### DOM 事件流
+
+这就是为什么捕获事件中，目标阶段是最后。而在冒泡事件中，目标阶段是最先了
+
+![DOM 事件流](https://github.com/easterCat/common_js/blob/master/js%E4%BA%8B%E4%BB%B6/img/2.png?raw=true)
+
 ##面试题答案
 
-- 1.利用事件冒泡的原理，让自己的所触发的事件，让他的父元素代替执行 2.阻止冒泡 ie 是 ;其他是;
+- 利用事件冒泡的原理，让自己的所触发的事件，让他的父元素代替执行 2.阻止冒泡 ie 是 ;其他是;
 
-- 2
-  | 浏览器 | 阻止冒泡 | 阻止默认 |
-  | :--- | ---------------------: | ------------------: | -------- |
-  | ie | ev.cancelBubble = true | return false |
-  | 其他 | ev.stopPropagation() | ev.preventDefault() |
+- | 浏览器 |               阻止冒泡 |            阻止默认 |
+  | :----- | ---------------------: | ------------------: |
+  | ie     | ev.cancelBubble = true |        return false |
+  | 其他   |   ev.stopPropagation() | ev.preventDefault() |
 
-- 3
-  "事件冒泡"：事件开始由最具体的元素接受，然后逐级向上传播
+- "事件冒泡"：事件开始由最具体的元素接受，然后逐级向上传播
   "事件捕捉"：事件由最不具体的节点先接收，然后逐级向下，一直到最具体的
   "DOM 事件流"：三个阶段：事件捕捉，目标阶段，事件冒泡
 
 - xxx.onEvent = function(){}其实是赋值操作，下面取缔上面的。而事件绑定可以一口气绑定多个事件，按绑定顺序执行
+
+> xxx.onEvent 就是对监听属性赋值一个函数，取消绑定设置为空就好了 xxx.onEvent = null
+
+## 常见事件
+
+#### 鼠标事件
+
+- mousedown 鼠标设备按下一个元素的时候触发 mousedown 事件
+- mouseup 鼠标设备从按下的元素上弹起的时候触发 mouseup 事件
+- click 鼠标点击元素的时候触发 click 事件
+- dblclick 鼠标双击元素的时候触发 dblclick 事件
+- mouseover 鼠标移动到某元素上的时候触发 mouseover 事件
+- mouseout 鼠标从某元素离开的时候触发 mouseout 事件
+- mousemove 鼠标在某元素上移动但未离开的时候触发 mousemove 事件
+
+#### 键盘事件
+
+- keypress 按键按下的时候触发该事件
+- keydown 按键按下的时候触发该事件，并且在 keypress 事件之前
+- keyup 按键松开的时候触发该事件，在 keydown 和 keypress 事件之后
+
+#### 表单事件
+
+- select 文本字段（input, textarea 等）的文本被选择的时候触发该事件
+- change 控件失去 input 焦点的时候触发该事件（或者值被改变的时候）
+- submit 表单提交的时候触发该事件
+- reset 表单重置的时候触发该事件
+- focus 元素获得焦点的时候触发该事件，通常来自鼠标设备或 Tab 导航
+- blur 元素失去焦点的时候触发该事件，通常来自鼠标设备或 Tab 导航
+
+#### 其它事件
+
+- load 页面加载完毕（包括内容、图片、frame、object）的时候触发该事件
+- resize 页面大小改变的时候触发该事件（例如浏览器缩放）
+- scroll 页面滚动的时候触发该事件
+- unload 从页面或 frame 删除所有内容的时候触发该事件（例如离开一个页面）
 
 ## 参考
 
