@@ -5,7 +5,7 @@
 - Javascript 的事件流模型都有什么？
 - 事件绑定和普通事件有什么区别？
 
-![event](https://github.com/easterCat/common_js/blob/master/js%E4%BA%8B%E4%BB%B6/img/3.png?raw=true)
+![event](https://github.com/easterCat/common_js/blob/master/js%E4%BA%8B%E4%BB%B6/img/03.png?raw=true)
 
 ## Event 对象
 
@@ -96,7 +96,7 @@ addEvent(oBtn, 'click', function(){
 });
 ```
 
-![arguments对象](https://github.com/easterCat/common_js/blob/master/js%E4%BA%8B%E4%BB%B6/img/1.png?raw=true)
+![arguments对象](https://github.com/easterCat/common_js/blob/master/js%E4%BA%8B%E4%BB%B6/img/01.png?raw=true)
 
 > W3C 和微软模型还有其他的少许差异，callee 是返回正在被执行的 function 函数，也就是所指定的 function 对象的正文。arguments.callee 知道就好了，别在代码中用了
 
@@ -362,7 +362,7 @@ addEvent(oBtn, 'click', function(){
 
 这就是为什么捕获事件中，目标阶段是最后。而在冒泡事件中，目标阶段是最先了
 
-![DOM 事件流](https://github.com/easterCat/common_js/blob/master/js%E4%BA%8B%E4%BB%B6/img/2.png?raw=true)
+![DOM 事件流](https://github.com/easterCat/common_js/blob/master/js%E4%BA%8B%E4%BB%B6/img/02.png?raw=true)
 
 ##面试题答案
 
