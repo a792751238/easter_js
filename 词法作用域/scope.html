@@ -8,17 +8,15 @@
   </head>
   <body></body>
   <script>
-    var scope = "global scope";
-
-    function checkScope() {
-      var scope = "local scope";
-      function inner() {
-        return scope;
+    // var name = "V8";
+    function init() {
+      var name = "Mozilla";
+      function displayName() {
+        // var name = "Webkit";
+        alert(name);
       }
-
-      return inner();
+      displayName();
     }
-
-    checkScope();
+    init();
   </script>
 </html>
