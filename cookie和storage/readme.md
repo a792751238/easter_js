@@ -48,34 +48,21 @@ document.cookie="hello=world; expires=Thu, 18 Dec 2043 12:00:00 GMT;"
 3. 只在 cookie 中存放不敏感数据，即使被盗也不会有重大损失。
 4. 控制 cookie 的生命期，使之不会永远有效。偷盗者很可能拿到一个过期的 cookie。
 
-## localStorage
+## localStorage 和 sessionStorage
 
-1. 只读的 localStorage 属性允许你访问一个 Document 源（origin）的对象 Storage
-2. 存储的数据能在跨浏览器会话保留,存储在 localStorage 的数据可以长期保留
+1. 返回值是一个 Storage 对象,Storage 提供了访问特定域名下的会话存储或本地存储的功能，可以添加、修改或删除存储的数据项, Window.sessionStorage 返回 Storage
+2. 只在本地存储,localStorage 和 sessionStorage 的数据不会跟随 HTTP 请求一起发送到服务器,cookie 会
 3. 数据存储在 localStorage,它们都特定于页面的协议
-4. localStorage 中的键值对总是以字符串的形式存储
-5. 返回一个可被用于访问当前源（ origin ）的本地存储空间的 Storage 对象
-
-localStorage 中的键值对总是以字符串的形式存储。 (需要注意, 和 js 对象相比, 键值对总是以字符串的形式存储意味着数值类型会自动转化为字符串类型)
-
-#### localStorage 方法
-
-- key() 该方法接受一个数值 n 作为参数，并返回存储中的第 n 个键名
-- setItem(key,data) 该方法接受一个键名作为参数，返回键名对应的值
-- getItem(key) 该方法接受一个键名和值作为参数，将会把键值对添加到存储中，如果键名存在，则更新其对应的值
-- removeItem(key) 该方法接受一个键名作为参数，并把该键名从存储中删除
-- clear() 调用该方法会清空存储中的所有键名
-
-## sessionStorage
-
-1. sessionStorage 属性允许你访问一个 session Storage 对象
-2. 存储在 sessionStorage 里面的数据在页面会话结束时会被清除(页面会话在浏览器打开期间一直保持，并且重新加载或恢复页面仍会保持原来的页面会话),也就关闭浏览器会清除.
-3. 只在本地存储,seesionStorage 的数据不会跟随 HTTP 请求一起发送到服务器,cookie 会
-4. localStorage 中的键值对总是以字符串的形式存储
-5. 返回值是一个 Storage 对象,Storage 提供了访问特定域名下的会话存储或本地存储的功能，可以添加、修改或删除存储的数据项, Window.sessionStorage 返回 Storage
+4. localStorage 和 sessionStorage 中的键值对总是以字符串的形式存储。 (键值对总是以字符串的形式存储,数值类型会自动转化为字符串类型)
+5. localStorage 和 sessionStorage 不能被爬虫抓取到
 6. 各浏览器支持的 localStorage 和 sessionStorage 容量上限不同,最低目前在 1m 以上[support-test](http://dev-test.nemikor.com/web-storage/support-test/)
 
-#### sessionStorage 方法
+#### localStorage 和 sessionStorage 不同
+
+1. localStorage 属性允许你访问一个 Document 源（origin）的对象 Storage,sessionStorage 属性允许你访问一个 session Storage 对象
+2. 存储在 sessionStorage 里面的数据在页面会话结束时会被清除(页面会话在浏览器打开期间一直保持，并且重新加载或恢复页面仍会保持原来的页面会话),也就关闭浏览器会清除.localStorage 存储的数据能在跨浏览器会话保留,存储在 localStorage 的数据可以长期保留
+
+#### localStorage 和 sessionStorage 方法
 
 - key() 该方法接受一个数值 n 作为参数，并返回存储中的第 n 个键名
 - setItem(key,data) 该方法接受一个键名作为参数，返回键名对应的值
@@ -83,7 +70,7 @@ localStorage 中的键值对总是以字符串的形式存储。 (需要注意, 
 - removeItem(key) 该方法接受一个键名作为参数，并把该键名从存储中删除
 - clear() 调用该方法会清空存储中的所有键名
 
-#### sessionStorage 的使用
+#### sessionStorage 的使用(localStorage 差不多)
 
 ```
 function initSession() {
