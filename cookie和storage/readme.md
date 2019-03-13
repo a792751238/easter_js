@@ -50,12 +50,14 @@ document.cookie="hello=world; expires=Thu, 18 Dec 2043 12:00:00 GMT;"
 
 ## localStorage 和 sessionStorage
 
-1. 返回值是一个 Storage 对象,Storage 提供了访问特定域名下的会话存储或本地存储的功能，可以添加、修改或删除存储的数据项, Window.sessionStorage 返回 Storage
-2. 只在本地存储,localStorage 和 sessionStorage 的数据不会跟随 HTTP 请求一起发送到服务器,cookie 会
+1. 返回值是一个 Storage 对象,可以添加、修改或删除存储的数据项
+2. 只在本地存储,localStorage 和 sessionStorage 的数据不会跟随 HTTP 请求一起发送到服务器,cookie 会发送
 3. 数据存储在 localStorage,它们都特定于页面的协议
 4. localStorage 和 sessionStorage 中的键值对总是以字符串的形式存储。 (键值对总是以字符串的形式存储,数值类型会自动转化为字符串类型)
 5. localStorage 和 sessionStorage 不能被爬虫抓取到
-6. 各浏览器支持的 localStorage 和 sessionStorage 容量上限不同,最低目前在 1m 以上[support-test](http://dev-test.nemikor.com/web-storage/support-test/)
+6. 不同浏览器无法共享 localStorage 或 sessionStorage 中的信息
+7. 相同浏览器的不同页面间可以共享相同的 localStorage（同源策略）,但是不同页面或标签页间无法共享 sessionStorage 的信息(多个 iframe 算是同源页面)
+8. 各浏览器支持的 localStorage 和 sessionStorage 容量上限不同,最低目前在 1m 以上[support-test](http://dev-test.nemikor.com/web-storage/support-test/)
 
 #### localStorage 和 sessionStorage 不同
 
@@ -64,7 +66,7 @@ document.cookie="hello=world; expires=Thu, 18 Dec 2043 12:00:00 GMT;"
 
 #### localStorage 和 sessionStorage 方法
 
-- key() 该方法接受一个数值 n 作为参数，并返回存储中的第 n 个键名
+- key() 该方法接受一个数值 n 作为参数，并返回存储中的第 n 个键名(Storage 的方法)
 - setItem(key,data) 该方法接受一个键名作为参数，返回键名对应的值
 - getItem(key) 该方法接受一个键名和值作为参数，将会把键值对添加到存储中，如果键名存在，则更新其对应的值
 - removeItem(key) 该方法接受一个键名作为参数，并把该键名从存储中删除
@@ -94,7 +96,6 @@ function setSession(name, data) {
 
 //sessionStorage 用于临时保存同一窗口(或标签页)的数据，在关闭窗口或标签页之后将会删除这些数据
 export { initSession, getSession, setSession };
-
 ```
 
 ## Docs
