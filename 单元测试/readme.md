@@ -107,6 +107,8 @@ Config file generated at "D:\ComProjects\haocai\pc.haocai\karma.conf.js".
 
 然后就是 karma start,会自己找到 karma.config.js 配置文件并执行,如果配置文件改名了,就执行 karma start filename.成功了就出现一个小的 chrome,这个窗口如果不中断进程,点击 x 关闭也会自己打开.
 
+karma run 则在 karma start 之后对 karma 直接执行测试
+
 ![01]()
 
 ## 单元测试
@@ -184,6 +186,88 @@ TOTAL: 1 SUCCESS
 
 启动 karma start,会生成 coverage 文件夹,测试的覆盖率就在里面的 index.html 里面,用浏览器打开
 ![02]()
+
+## 配合 webpack 测试 vue
+
+#### 引入 webpack
+
+安装 karma-webpack
+
+```
+npm install --save-dev karma-webpack
+```
+
+在 karma.conf.js 引用 webpack
+
+```
+const webpack = require("webpack");
+```
+
+然后加入 webpack 配置
+
+```
+const webpackConfig = require("./webpack.conf");
+
+{
+  ......
+  webpack:webpackConfig
+}
+```
+
+添加一个 src/hello.vue
+
+```
+<template>
+  <div>
+    <h1 id="hello">{{ text}}</h1>
+  </div>
+</template>
+
+<script>
+  export default {
+    data() {
+      return {
+        text: 'hello world'
+      }
+    }
+  }
+</script>
+
+<style scoped>
+</style>
+
+```
+
+然后添加 hello.test.js
+
+```
+import Vue from 'vue'
+import hello from "../src/hello.vue";
+
+describe('hello world', () => {
+  it('should render correct contents', () => {
+    const Constructor = Vue.extend(hello);
+    const vm = new Constructor().$mount();
+    expect(vm.$el.querySelector('#hello').textContent).toEqual('hello world');
+  })
+});
+```
+
+启动测试
+
+```
+INFO: 'Download the Vue Devtools extension for a better development experience:
+https://github.com/vuejs/vue-devtools'
+INFO: 'You are running Vue in development mode.
+Make sure to turn on production mode when deploying for production.
+See more tips at https://vuejs.org/guide/deployment.html'
+Chrome 72.0.3626 (Windows 10.0.0): Executed 1 of 1 SUCCESS (0.101 secs / 0.009 secs)
+TOTAL: 1 SUCCESS
+```
+
+最后出现个 1 SUCCESS 说明成功了
+
+现在进行 vue 开发使用脚手架已经可以自带测试工具,是 karma + mocha 的组合,还有另外一个 jest(简单易用,强,无敌)
 
 [Jasmine 入门（上）](https://www.cnblogs.com/wushangjue/p/4541209.html)
 [karma+webpack 搭建 vue 单元测试环境](https://www.jianshu.com/p/a515fbbdd1b2)
