@@ -109,7 +109,7 @@ Config file generated at "D:\ComProjects\haocai\pc.haocai\karma.conf.js".
 
 karma run 则在 karma start 之后对 karma 直接执行测试
 
-![01]()
+![01](https://github.com/easterCat/common_js/blob/master/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/img/01.png?raw=true)
 
 ## 单元测试
 
@@ -185,7 +185,7 @@ TOTAL: 1 SUCCESS
 ```
 
 启动 karma start,会生成 coverage 文件夹,测试的覆盖率就在里面的 index.html 里面,用浏览器打开
-![02]()
+![02](https://github.com/easterCat/common_js/blob/master/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/img/02.png?raw=true)
 
 ## 配合 webpack 测试 vue
 
