@@ -271,3 +271,5 @@ TOTAL: 1 SUCCESS
 
 [Jasmine 入门（上）](https://www.cnblogs.com/wushangjue/p/4541209.html)
 [karma+webpack 搭建 vue 单元测试环境](https://www.jianshu.com/p/a515fbbdd1b2)
+[vuejs 单元测试](https://cn.vuejs.org/v2/guide/unit-testing.html)
+[Karma+Jasmine 实现自动化单元测试](https://www.cnblogs.com/jasmine-95/p/6054839.html)
