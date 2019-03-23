@@ -1009,7 +1009,13 @@
       return Markmap;
     });
     $(function() {
+      console.log("网站加载完毕");
       var node = document.getElementById("LiuChengTu");
+      var chart = document.getElementById("mindmap");
+      if (chart) {
+        var width = window.getComputedStyle(chart).width;
+        document.getElementById("mindmap").style.height = width;
+      }
       if (node) {
         var text = node.innerText;
         var first = JSON.parse(text);
