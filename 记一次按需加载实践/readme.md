@@ -32,8 +32,8 @@ plugins: [
 ```
 
 这样在打包 npm start 或者 npm run build 之后就可以进行打包文件大小的查看了
-![01]()
-![02]()
+![01](https://github.com/easterCat/common_js/blob/master/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%8C%89%E9%9C%80%E5%8A%A0%E8%BD%BD%E5%AE%9E%E8%B7%B5/img/01.png?raw=true)
+![02](https://github.com/easterCat/common_js/blob/master/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%8C%89%E9%9C%80%E5%8A%A0%E8%BD%BD%E5%AE%9E%E8%B7%B5/img/02.png?raw=true)
 
 ## 实践
 
@@ -43,8 +43,8 @@ plugins: [
 
 最初的实现是使用umd的方式进行模块化兼容，所有的大类方法比如array全部写到了array文件夹下的index.js里面，现在将单独的方法放到单独的文件里面。
 
-![03]()
-![04]()
+![03](https://github.com/easterCat/common_js/blob/master/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%8C%89%E9%9C%80%E5%8A%A0%E8%BD%BD%E5%AE%9E%E8%B7%B5/img/03.png?raw=true)
+![04](https://github.com/easterCat/common_js/blob/master/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%8C%89%E9%9C%80%E5%8A%A0%E8%BD%BD%E5%AE%9E%E8%B7%B5/img/04.png?raw=true)
 
 #### 新建babel插件
 
@@ -84,9 +84,34 @@ module.exports = function (babel) {
 
 然后执行npm run build后可以根据出现的分析发现，仅仅就引入了一个函数的大小
 
-![05]()
+![05](https://github.com/easterCat/common_js/blob/master/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%8C%89%E9%9C%80%E5%8A%A0%E8%BD%BD%E5%AE%9E%E8%B7%B5/img/05.png?raw=true)
 
 看到分析发现当前引入的内容仅有flatten和该函数所依赖的object方法，剩下的都没有引入。基本成功，剩下的就是继续拆分和优化了。
+
+## npm更新版本
+
+函数库做完了，可以下载引入使用，可以直接安装github上的包。这是是发布到npm上进行管理的安装。
+
+#### npm login
+
+进行npm的登录，没有账号的官网注册。必须登录
+
+#### npm publish
+
+将当前库文件进行发布，可以创建一个.npmignore将不想发布的文件或文件夹过滤掉
+
+#### npm version <update_type>
+
+- 直接使用npm version是查看当前包和当前所有依赖包的版本
+- 查看单独的包用npm view kiana-js versions,这样就是查看当前发布包的版本。
+- 参数<update_type>有三个参数
+    - patch补丁，例如version 1.0.0 => version 1.0.1
+    - minor修改，例如version 1.0.0 => version 1.1.0
+    - major大版本，例如version 1.0.0 => version 2.0.0
+
+#### 流程
+
+npm login => npm publish(如果没发布过) => npm version xxx => npm publish => npm view xxx versions(可以不看)
 
 ## Docs
 
@@ -96,4 +121,5 @@ module.exports = function (babel) {
 [babel-types](https://github.com/jamiebuilds/babel-types)
 [按需加载实践](https://github.com/MuYunyun/diana/issues/5)
 [babel-plugin-on-demand-loading](https://github.com/demos-platform/babel-plugin-on-demand-loading/blob/master/lib/index.js)
+[如何更新自己写的npm包（模块](https://blog.csdn.net/cvper/article/details/79051048)
 
