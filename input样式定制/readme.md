@@ -67,3 +67,23 @@ input:-ms-input-placeholder
 ```
 
 [input-placeholder](https://developer.mozilla.org/zh-CN/docs/Web/CSS/::placeholder)
+
+#### text-indent
+
+控制input文本开始的位置，默认的贴边，不好看
+
+text-indent 属性 规定了 一个元素 首行 文本内容之前应该有多少水平空格。水平空格是块级包含元素的内容盒子的左边(对于从右向左布局来说是右边).
+
+(网上很多都提议是padding-left直接挤出一个位置，觉得不太合适，缩进方法感觉更适合)
+
+```
+text-indent: 3em       /*  values */
+text-indent: 40px
+text-indent: 15%       /*  values, relatives to the containing block width */
+text-indent: each-line /* keywords values */
+text-indent: hanging
+
+text-indent: inherit
+```
+
+[text-indent](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-indent)
