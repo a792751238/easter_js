@@ -27,7 +27,7 @@ var app01 = new Vue({
 
 #### 生命周期
 
-[01]()
+[01](https://github.com/easterCat/common_js/blob/master/vue/img/01.png?raw=true)
 
 ## template模板
 
