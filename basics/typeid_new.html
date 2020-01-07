@@ -1,40 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>new运算符实现</title>
-</head>
+  </head>
 
-<body>
-</body>
-<script>
-
-
+  <body></body>
+  <script>
     function Animal(name, age) {
-        this.name = name;
-        this.age = age;
-        this.voice = 'miao';
+      this.name = name;
+      this.age = age;
+      this.voice = "miao";
     }
 
-    Animal.prototype.type = 'mao';
+    Animal.prototype.type = "mao";
 
-    Animal.prototype.saying = function () {
-        console.log(this.voice);
+    Animal.prototype.saying = function() {
+      console.log(this.voice);
     };
 
-    var cat = _new(Animal, 'mimi', 10);
+    var cat = _new(Animal, "mimi", 10);
 
-
-    console.log('instance =>', cat);
+    console.log("instance =>", cat);
     console.log({
-        name: cat.name,
-        age: cat.age,
-        type: cat.type
+      name: cat.name,
+      age: cat.age,
+      type: cat.type
     });
 
     cat.saying();
-
 
     //    function _new() {
     //        // 将伪数组arguments从头部删除一个，并将其其返回,此处是为了获取传入的构造函数
@@ -54,18 +48,15 @@
     //        }
 
     function _new() {
-        //console.log(this)//window
-        var fConstructor = Array.prototype.shift.call(arguments);
-        var oArgs = arguments;
-        var fNewConstr = function () {
-            //console.log(this);//fNewConstr
-            fConstructor.apply(this, oArgs);
-        };
-        fNewConstr.prototype = fConstructor.prototype;
-        return new fNewConstr();
+      //console.log(this)//window
+      var fConstructor = Array.prototype.shift.call(arguments);
+      var oArgs = arguments;
+      var fNewConstr = function() {
+        //console.log(this);//fNewConstr
+        fConstructor.apply(this, oArgs);
+      };
+      fNewConstr.prototype = fConstructor.prototype;
+      return new fNewConstr();
     }
-
-
-</script>
-
+  </script>
 </html>
